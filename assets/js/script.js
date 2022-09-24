@@ -1,0 +1,6 @@
+function runGame () {
+
+};
+
+function checkAnswer () {
+}
