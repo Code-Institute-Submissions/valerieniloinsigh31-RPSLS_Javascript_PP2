@@ -1,3 +1,27 @@
+/*Font url*/
+@import url('https://fonts.googleapis.com/css2?family=0tomanopee+0ne&display=swap');
+
+/* -- Real PP2 Javascript Rock, Paper, Scissors Project */
+
+/*Main view set-up*/
+html {}
+body{}
+
+/*Header and footer*/
+ header{}
+ footer{}
+
+ /*Game area-using relative values-responsive without using media queries*/
+
+.game-area {}
+.control{}
+
+
+
+
+
+
+
 /* --------- Global style */
 
 body {
@@ -70,7 +94,7 @@ body {
     font-size: 1rem;
 }
 
-#answer-box {
+# answer-box {
     border: none;
     color: #445361;
     display: inline-block;

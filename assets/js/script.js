@@ -1,3 +1,27 @@
+/**
+ * Declare constants for DOM elements 
+ * and possible choices
+ */
+
+
+/**
+ * Add event listeners to all of the buttons
+ */
+
+/**
+ * The main game function. Accepts one parameter, which
+ * is the data-choice value of the selected button
+ */
+
+/**
+ * Checks to see who the winners are
+ */
+
+
+
+
+
+
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
@@ -43,6 +67,9 @@ else if (gameType === "multiply") {
 }
 else if (gameType === "subtract") {
     displaySubtractQuestion(num1,num2);
+}
+else if (gameType === "division") {
+    displayDivisionQuestion(num1,num2);
 }
 else
 {
@@ -93,6 +120,9 @@ else if (operator === "x") {
 else if (operator === "-") {
     return [operand1 - operand2, "subtract"];
 }
+else if (operator === "/") {
+    return [operand1 / operand2, "division"];
+}
 else {
     alert(`Unimplemented operator ${operator}`);
     throw `Unimplemented operator ${operator}. Aborting!`;
@@ -130,4 +160,10 @@ function displayMultiplyQuestion (operand1, operand2) {
     document.getElementById('operand1').textContent = operand1;
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "x";
+}
+
+function displayDivisionQuestion (operand1, operand2) {
+    document.getElementById('operand1').textContent = operand1 > operand2 ? operand1: operand2;
+    document.getElementById('operand2').textContent = operand1 > operand2 ? operand2: operand1;
+    document.getElementById('operator').textContent = "/";
 }
