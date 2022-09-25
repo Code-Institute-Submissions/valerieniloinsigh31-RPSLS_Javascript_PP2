@@ -1,54 +1,49 @@
 /*Font url*/
 @import url('https://fonts.googleapis.com/css2?family=0tomanopee+0ne&display=swap');
 
-/* -- Real PP2 Javascript Rock, Paper, Scissors Project */
+/* -- Real PP2 Javascript Rock, Paper, Scissors, Lizard, Spock Project */
 /*Main view set-up*/
-html {}
-body{}
+html {
+    min-height:100%;
+    position:relative;
+}
+body{
+    font-family: '0tomanopee One', sans-serif;
+    margin:0;
+}
 
 /*Header and footer*/
- header{}
- footer{}
+ header{
+    text-align:center;
+    height:50px;
+ }
+ footer{
+    position:absolute;
+    width:100%;
+    left:0;
+    bottom:0;
+    box-sizing:border-box;
+    min-height:80px;
+    padding-top:5px;
+    text-align:center;
+    color:#fff;
+    background: color #000;
+ }
 
  /*Game area-using relative values-responsive without using media queries*/
 
-.game-area {}
-.control{}
-
-
-/* --------- Global style */
-
-body {
-    background-color: white;
-    font-family: "Raleway", sans-serif;
-    color: #445361;
-    text-align: center;
-}
-
-/* --------- Heading */
-
-.heading {
-    text-align: center;
-    font-size: 2.5rem;
-}
-
-.logo {
-    height: 100%;
-    padding-right: 5px;
-}
-
-/* --------- Game layout */
-
 .game-area {
-    background-color: #E6ECF0;
-    box-sizing: border-box;
-    width: 85%;
-    height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
+    width:75%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:1%;
+    text-align: center;
+}
+.control{
+    display: inline-block;
+    margin:2px;
+    width:80px;
+    height:40px;
 }
 
 .score-area {
@@ -61,6 +56,7 @@ body {
     width: 85%;
     margin: 30px auto;
 }
+
 
 #score {
     color: green;
@@ -77,18 +73,22 @@ body {
     font-size: 1rem;
 }
 
-# answer-box {
-    border: none;
-    color: #445361;
-    display: inline-block;
-    height: 40px;
-    width: 80px;
-    font-size: 1.2rem;
-}
 
 .scores {
     display: inline-block;
     padding: 25px;
+}
+
+/* --------- Heading */
+
+.heading {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.logo {
+    height: 100vh;
+    padding-right: 5px;
 }
 
 /* --------- Buttons */
@@ -125,7 +125,7 @@ body {
     position:relative;
     left:-0.5em;
 }
-
+/*Rock button*/
 .btn--blue {
     border-color: blue;
     color: blue;
@@ -136,7 +136,7 @@ body {
     background-color: darkblue;
     color: white;
 }
-
+/*Paper button*/
 .btn--orange {
     border-color: orange;
     color: orange;
@@ -147,7 +147,7 @@ body {
     background-color: darkorange;
     color: white;
 }
-
+/*Scissors button*/
 .btn--red {
     border-color: red;
     color: red;
@@ -158,12 +158,12 @@ body {
     background-color: darkred;
     color: white;
 }
-
+/*Lizard button*/
 .btn--green {
     border-color: green;
     color: green;
 }
-
+/*Spock button*/
 .btn--green:active,
 .btn--green:hover {
     background-color: darkgreen;
