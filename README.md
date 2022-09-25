@@ -15,19 +15,6 @@ I planned on having shorter simpler HTML and CSS pages so that I could truly foc
 <b>Value that the game provides to its users:</b> An entertaining and engaging game that is sponstaneous in it's selection. It is an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissor', as it is user versus computer essentially.
 <b>Description of the deployment procedure:</b> As usual, I created my project on the GITHUB platform, as supported by CI. Once the project was fully complete, fully tested and formatted properly, I followed the usual steps to deploy the project. Please see the description of the steps as well as screenshots below:
 
-<h2>Deployment</h2>
-GITHUB: 
-Enter GITHUB Pages
-Set the branch to Main
-Make live
-Launch
-Wait
-Check url
-
-4.2	Insert screenshots of the project features, give a brief description of what each feature does and explain its value to the user.
-List of present features. What they do. Explain value to user.
-Section of future features.
-
 
 <b>Balsamiq wireframes</b>
 
@@ -70,3 +57,67 @@ Structure
  <em>Who it is intended to target:</em> Ages 14+. Anybody in a waiting room of any sort or on a long train/bus journey or just on a cheeky lunch break from school or work. Only one player required and no actual rocks, scissors or paper needed at all.
  <em>How it will be useful to the target audience: It is an engaging and interactive game that people can play on their own. It is useful as it does not require mrore than one person and provides spontaneous, interactive fun that is easy to understand.</em>
 
+<h2>Features</h2>
+<p>In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.</p>
+
+<h3>Existing Features</h3>
+HTML:
+Created the usual HTML page, titled 'Index.html'
+Inserted the necessary links to connect it with the CSS and Javascript pages
+Link for CSS: 'css.stylesheets'  Location: Contained within the <head> on the HTML page
+Link for Javascript: 'javascript...'  Location: Contained within the <body> on the HTML page
+CSS: The focus here was having simple, legible design that was also fun in color scheme and responsive. Clearly divided the different sections using comments.
+Javascript: The focus of this project. Interactive, spontaneous, well-thought through.
+
+<h3>Features left to implement</h3>
+-Audio that the user can select to play
+-Pacing
+-Timer appears
+-Different gifs/short videos appear prompted by whether the player/computer has lost and also based on the score. For example, the more the player is losing by, the more dramatic and catastrophic the video will be in response to losing another point.
+
+<b>Testing</b>
+In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+
+Developers Tools (viewport testing): In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
+
+You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
+
+<em>Validator Testing</em>
+<b>HTML</b>
+No errors were returned when passing through the official W3C validator
+<b>CSS</b>
+No errors were found when passing through the official (Jigsaw) validator
+<b>Javascript</b>
+JSHint
+
+<b>Unfixed Bugs</b>
+You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. 
+
+<b>Deployment</b>
+This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+
+The site was deployed to GitHub pages. The steps to deploy are as follows:
+I logged into GITHUB (Subscription hours provided by CI)
+In the GitHub repository, navigate to the Settings tab
+From the source section drop-down menu, I selected the 'Master Branch'
+The page then automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+The live link can be found here:
+
+<b>Credits</b>
+I was greatly inspired by the tutorials provided on this module.
+In building the repositary, I completed the walk-through project 'Love Math' whilst listening to the tutorials. I did this on the PP2 Repositary and once complete, edited that code to redesign it to my Javascript project.
+
+I found that this enabled me to have confidence in the structure.
+
+I decided to go with RPS as I am familiar with the traditional game and per the PP2 video provided by CI, I saw definite areas of connection between the design format of this game and the Love Math game they supplied (e.g. game area, score area)
+
+
+<b>Content</b>
+The google font was taken from ''
+The icons in the footer were taken from Font Awesome
+
+<b>Media</b>
+The photos used are from ''
+The image used for '' was taken from ''
+The animation used was taken from
+The loaded used was taken from ''
