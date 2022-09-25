@@ -1,6 +1,9 @@
 /*Font url*/
 @import url('https://fonts.googleapis.com/css2?family=0tomanopee+0ne&display=swap');
 
+/*Importing animate for animations*/
+@import url('animate.css');
+
 /* -- Real PP2 Javascript Rock, Paper, Scissors Project */
 
 /*Main view set-up*/
