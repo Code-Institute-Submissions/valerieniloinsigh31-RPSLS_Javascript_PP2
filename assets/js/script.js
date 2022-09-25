@@ -26,6 +26,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 /**
  * The main game function. Accepts one parameter, which
  * is the data-choice value of the selected button
+ * ties the images in with the choices
  */
 function playGame(playerChoice) {
 
@@ -62,33 +63,8 @@ let computerChoice= Math.floor(Math.random()*5);
 document.getElementById ("answer-box").value= "";
 document.getElementById ("answer-box").focus();
 
-// Presents the players choice and the computer's choice and assesses the winner
-
-let num1=Math.floor(Math.random()*25)+1;
-let num2=Math.floor(Math.random()*25)+1;
-
-if (gameType === "addition") {
-    displayAdditionQuestion(num1, num2);
-}
-else if (gameType === "multiply") {
-    displayMultiplyQuestion(num1,num2);
-}
-else if (gameType === "subtract") {
-    displaySubtractQuestion(num1,num2);
-}
-else if (gameType === "division") {
-    displayDivisionQuestion(num1,num2);
-}
-else if (gameType === "division") {
-    displayDivisionQuestion(num1,num2);
-else
-{
-    alert(`Unknown game type: ${gameType}`);
-    throw `Unknown game type: ${gameType}. Aborting`
-}
-}
-
-,runGame());
+// Presents the players choice and the computer's choice and assesses the winner.
+//Insert variables and if else for each possible answer
 
 /**
  * Checks the answer against the first element in the 
@@ -97,6 +73,7 @@ else
 
 function checkAnswer () {
     let userAnswer= parseInt(document.getElementById("answer-box").value);
+    //change calculateAnswer so that it is randomly generated computer answer
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
 
@@ -129,5 +106,4 @@ document.getElementById("score").innerText= ++oldScore;
  */
 function incrementWrongAnswer () {
     let oldScore= parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText= ++oldScore;
-}
+    document.getElementById("incorrect").innerText= ++oldScore};
