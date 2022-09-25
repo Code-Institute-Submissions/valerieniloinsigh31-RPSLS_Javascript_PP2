@@ -64,10 +64,20 @@ Structure
 HTML:
 Created the usual HTML page, titled 'Index.html'
 Inserted the necessary links to connect it with the CSS and Javascript pages
-Link for CSS: 'css.stylesheets'  Location: Contained within the <head> on the HTML page
-Link for Javascript: 'javascript...'  Location: Contained within the <body> on the HTML page
+Link for CSS: '<link rel="stylesheet" href="assets/css/style.css">'  Location: Contained within the <head> on the HTML page
+Link for Javascript: 'assets/js/script.js'  Location: Contained within the <body> on the HTML page
 CSS: The focus here was having simple, legible design that was also fun in color scheme and responsive. Clearly divided the different sections using comments.
 Javascript: The focus of this project. Interactive, spontaneous, well-thought through.
+Font Awesome: I knew I wanted to add some of these fun icons
+Link: Location
+Favicon:
+I knew I wanted to add a fun favicon.
+Link: Location:
+Animations:
+In keeping with the fun, interactive theme, I wanted to add a bit of pizzazz to the page with an animation:
+Link:   Location:  What is it?:
+Loaders: As there is an element of suspense to this game...3,2,1 countdown, loader to help player prerpare
+Link:  Location:
 
 <h3>Features left to implement</h3>
 -Audio that the user can select to play
