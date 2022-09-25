@@ -27,8 +27,18 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * The main game function. Accepts one parameter, which
  * is the data-choice value of the selected button
  */
+function playGame(playerChoice) {
 
+    playerImage.src = `assets/images/${choices[playerChoice]}.png`;
+    playerImage.alt= choices[playerchoice];
+}
 
+let computerChoice= Math.floor(Math.random()*5);
+    computerImage.src = `assets/images/${choices[computerChoice]}.png`;
+    computerImage.alt= choices[computerchoice];
+
+    let result= checkWinner(choices[computerChoice], choices[playerChoice]);
+}
 
 /**
  * Checks to see who the winners are
