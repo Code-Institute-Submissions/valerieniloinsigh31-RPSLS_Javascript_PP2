@@ -1,3 +1,5 @@
+
+
 /**
  * Declare constants for DOM elements 
  * and possible choices
@@ -13,11 +15,20 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 /**
  * Add event listeners to all of the buttons
  */
+ document.addEventListener("DOMContentLoaded", function() {
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            let playerChoice = this.getAttribute("data-choice");
+            playGame(playerChoice);
+        });
 
 /**
  * The main game function. Accepts one parameter, which
  * is the data-choice value of the selected button
  */
+
+
 
 /**
  * Checks to see who the winners are
@@ -31,29 +42,8 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
-            }
-        });
 
-        document.getElementById("answer-box").addEventListener("keydown", function(event) {
-            if(event.key === "Enter") {
-                checkAnswer();
-            }
-        }
-        );
-
-        runGame("addition");
-    }
-});
 /**
  * The main game "loop" called when the script is first loaded
  * and after the user's answer has been processed
