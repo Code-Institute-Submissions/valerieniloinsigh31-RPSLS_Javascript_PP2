@@ -48,7 +48,7 @@ let computerChoice= Math.floor(Math.random()*5);
 
 
 
-
+//BELOW CODE ALL EXTRACTED FROM LOVE MATHS
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
@@ -61,7 +61,9 @@ let computerChoice= Math.floor(Math.random()*5);
 ,function runGame (gameType) {
 document.getElementById ("answer-box").value= "";
 document.getElementById ("answer-box").focus();
-// Creates 2 random numbers in cod between 1 and 25
+
+// Presents the players choice and the computer's choice and assesses the winner
+
 let num1=Math.floor(Math.random()*25)+1;
 let num2=Math.floor(Math.random()*25)+1;
 
@@ -77,6 +79,8 @@ else if (gameType === "subtract") {
 else if (gameType === "division") {
     displayDivisionQuestion(num1,num2);
 }
+else if (gameType === "division") {
+    displayDivisionQuestion(num1,num2);
 else
 {
     alert(`Unknown game type: ${gameType}`);
@@ -95,6 +99,11 @@ function checkAnswer () {
     let userAnswer= parseInt(document.getElementById("answer-box").value);
     let calculatedAnswer = calculateCorrectAnswer();
     let isCorrect = userAnswer === calculatedAnswer[0];
+
+    /** 
+     * code needs to be added here that apply the rules of the rpsls game, what beats what. Also, define both the user answer 
+     * and the computer answer
+     */
 
     if(isCorrect) {
         alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");

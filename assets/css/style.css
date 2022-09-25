@@ -59,7 +59,8 @@ body{
 }
 
 #player-image {
-    width:5%vh;
+    width:15vw;
+    padding: auto;
 }
 
 .computer {
@@ -69,7 +70,8 @@ body{
 }
 
 #computer-image {
-    width:5%vh;
+    width:15vw;
+    padding:auto;
 }
 
 .score-area {
