@@ -1,11 +1,7 @@
 /*Font url*/
 @import url('https://fonts.googleapis.com/css2?family=0tomanopee+0ne&display=swap');
 
-/*Importing animate for animations*/
-@import url('animate.css');
-
 /* -- Real PP2 Javascript Rock, Paper, Scissors Project */
-
 /*Main view set-up*/
 html {}
 body{}
@@ -18,11 +14,6 @@ body{}
 
 .game-area {}
 .control{}
-
-
-
-
-
 
 
 /* --------- Global style */
@@ -42,7 +33,7 @@ body {
 }
 
 .logo {
-    height: 40px;
+    height: 100%;
     padding-right: 5px;
 }
 
@@ -58,17 +49,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-}
-
-.question-area {
-    width: 50%;
-    font-size: 2rem;
-    margin: auto;
-    padding: 50px 0;
-}
-
-.question-area span {
-    padding: 0 15px;
 }
 
 .score-area {
@@ -223,15 +203,6 @@ body {
         left: -0.7rem;
     }
 
-    .question-area {
-        padding: 10% 0;
-        width: 100%;
-    }
-
-    .question-area span {
-        padding: 0;
-    }
-
     .answer-message {
         display: block;
     }
@@ -271,9 +242,6 @@ body {
 
     .btn--big {
         margin: 10px 10px;
-    }
-    .question-area {
-        padding: 10px 0;
     }
 
 }
