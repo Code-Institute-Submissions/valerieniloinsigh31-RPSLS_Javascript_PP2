@@ -21,7 +21,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
         button.addEventListener("click", function() {
             let playerChoice = this.getAttribute("data-choice");
             playGame(playerChoice);
-        });
+        });}
 
 /**
  * The main game function. Accepts one parameter, which
@@ -58,7 +58,7 @@ let computerChoice= Math.floor(Math.random()*5);
  * The main game "loop" called when the script is first loaded
  * and after the user's answer has been processed
  */
-function runGame (gameType) {
+,function runGame (gameType) {
 document.getElementById ("answer-box").value= "";
 document.getElementById ("answer-box").focus();
 // Creates 2 random numbers in cod between 1 and 25
@@ -84,7 +84,7 @@ else
 }
 }
 
-runGame();
+,runGame());
 
 /**
  * Checks the answer against the first element in the 
@@ -97,43 +97,16 @@ function checkAnswer () {
     let isCorrect = userAnswer === calculatedAnswer[0];
 
     if(isCorrect) {
-        alert("Hey! You got it right! :D");
+        alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
         incrementScore();
     } else {
-        alert (`Awww...you answered ${userAnswer}. The correct answer was ${calculatedAnswer[0]}!`);
+        alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the Dom beat you this time!`);
         incrementWrongAnswer();
     }
 
     runGame(calculatedAnswer[1]);
 }
 
-/**
- * Gets the operands (the numbers) and the operator (plus, minus etc)
- * directly from the dom, and returns the correct answer.
- */
-
-function calculateCorrectAnswer () {
-let operand1= parseInt(document.getElementById('operand1').innerText);
-let operand2= parseInt(document.getElementById('operand2').innerText);
-let operator=document.getElementById("operator").innerText;
-
-if (operator === "+") {
-    return [operand1 + operand2, "addition"];
-} 
-else if (operator === "x") {
-    return [operand1 * operand2, "multiply"];
-}
-else if (operator === "-") {
-    return [operand1 - operand2, "subtract"];
-}
-else if (operator === "/") {
-    return [operand1 / operand2, "division"];
-}
-else {
-    alert(`Unimplemented operator ${operator}`);
-    throw `Unimplemented operator ${operator}. Aborting!`;
-}
-}
 /**
  * Gets the current score from the DOM and increments it by 1
  */
@@ -148,28 +121,4 @@ document.getElementById("score").innerText= ++oldScore;
 function incrementWrongAnswer () {
     let oldScore= parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText= ++oldScore;
-}
-
-function displayAdditionQuestion (operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "+";
-}
-
-function displaySubtractQuestion (operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1 > operand2 ? operand1: operand2;
-    document.getElementById('operand2').textContent = operand1 > operand2 ? operand2: operand1;
-    document.getElementById('operator').textContent = "-";
-}
-
-function displayMultiplyQuestion (operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1;
-    document.getElementById('operand2').textContent = operand2;
-    document.getElementById('operator').textContent = "x";
-}
-
-function displayDivisionQuestion (operand1, operand2) {
-    document.getElementById('operand1').textContent = operand1 > operand2 ? operand1: operand2;
-    document.getElementById('operand2').textContent = operand1 > operand2 ? operand2: operand1;
-    document.getElementById('operator').textContent = "/";
 }
