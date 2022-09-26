@@ -71,15 +71,19 @@ let computerChoice= Math.floor(Math.random()*5);
 
 /**
  * Checks to see who the winners are
+ * define playerWinner and computerWinner
  */
 
+let playerWinner=
 
-
+let computerWinner=
 
 /**
- * Message Pop-Ups. Need to define 'isCorrect' to follow along with the rules of the game
+ * Message Pop-Ups. Need to define 'playerWinner' to follow along with the rules of the game. There are a number of
+ * situations in which the player could beat the computer. List all these. Use 'else if' then and all other situations
+ * will prompt the second alert about the Lizard winning
  */
- if(isCorrect) {
+ if(playerWinner) {
     alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
     incrementScore();
 } else {
@@ -96,7 +100,7 @@ runGame(calculatedAnswer[1]);
 
 
 /**
- * Gets the current score from the DOM and increments it by 1
+ * Gets the current score from the DOM and increments it by 1-need to define 'incrementScore at some point
  */
 
  function incrementScore () {
@@ -104,14 +108,13 @@ runGame(calculatedAnswer[1]);
     document.getElementById("score").innerText= ++oldScore;
     }
     /**
-     * Gets the current tally of times the Lizard won the game of RPSLS from the DOM and increments it by 1
+     * Gets the current tally of times the Lizard won the game of RPSLS from the DOM and increments it by 1. Need to define 
+     * incrementWrongchoice at some point
      */
-    function incrementWrongAnswer () {
+    function incrementWrongChoice () {
         let oldScore= parseInt(document.getElementById("incorrect").innerText);
         document.getElementById("incorrect").innerText= ++oldScore};
     
-
-
 
 //BELOW CODE ALL EXTRACTED FROM LOVE MATHS
 
@@ -133,25 +136,6 @@ function checkAnswer () {
      * code needs to be added here that apply the rules of the rpsls game, what beats what. Also, define both the user answer 
      * and the computer answer
      */
-
-
-    /**
-     * code for message pop-ups
-     */
-
-
-    if(isCorrect) {
-        alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
-        incrementScore();
-    } else {
-        alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the DO, beat you this time!`);
-        incrementWrongAnswer();
-    }
-
-    runGame(calculatedAnswer[1]);
-}
-
-/**
 
 
 /**
