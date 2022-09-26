@@ -36,10 +36,20 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-                let gameType = this.getAttribute("data-choice");
-                alert(`You clicked ${gameType}`);
+        if(this.getAttribute("data-choice") === "0") {
+            alert("You chose Rock!");
+        } else if (this.getAttribute("data-choice") === "1") {
+            alert("You chose Paper!");
+        } else if (this.getAttribute("data-choice") === "2") {
+            alert("You chose Scissors!");
+        } else if (this.getAttribute("data-choice") === "3") {
+                alert("You chose Lizard!");
+        } else if (this.getAttribute("data-choice") === "4") {
+                alert("You chose Spock!");
             }
-
+        });
+    }
+});
 /**
  * commented out code from scope video
  */
@@ -109,7 +119,7 @@ runGame(calculatedAnswer[1]);
     }
     /**
      * Gets the current tally of times the Lizard won the game of RPSLS from the DOM and increments it by 1. Need to define 
-     * incrementWrongchoice at some point
+     * incrementWrongChoice at some point
      */
     function incrementWrongChoice () {
         let oldScore= parseInt(document.getElementById("incorrect").innerText);
@@ -127,10 +137,10 @@ runGame(calculatedAnswer[1]);
  */
 
 function checkAnswer () {
-    let userAnswer= parseInt(document.getElementById("answer-box").value);
+    let userAnswer= document.getElementById("answer-box").value;
     //change calculateAnswer so that it is randomly generated computer answer
-    let calculatedAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer === calculatedAnswer[0];
+    //let calculateWinningAnser = ();
+    //let isCorrect = userAnswer === calculateWinningAnswer[0];
 
     /** 
      * code needs to be added here that apply the rules of the rpsls game, what beats what. Also, define both the user answer 
@@ -148,7 +158,7 @@ function checkAnswer () {
  //(how many variations
  //5 choices for user, 5 choices for computer...1-5=25choices)
  //incrementScore(); (if user wins)
- //incrementWrongAnswer(); (if lizard wins)
+ //incrementWrongChoice(); (if lizard wins)
  
 function runGame () {
 
@@ -157,7 +167,6 @@ function runGame () {
 function CheckAnswer () {
 
 }
-
 
 function calculateWinningAnswer () {
 
@@ -171,3 +180,21 @@ function incrementWrongAnswer () {
 
 }
 
+function displayComputerRock () {
+
+}
+
+function displayComputerPaper () {
+    
+}
+
+function displayComputerScissors () {
+    
+}
+
+function displayComputerLizard () {
+    
+}
+function displayComputerSpock () {
+    
+}
