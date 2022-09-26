@@ -79,6 +79,7 @@ body{
     opacity:15%;
 }
 
+/*this is contained below the player/computer score sections in hTML-to be reviewed*/
 .score-area {
     margin: 5px auto;
     width: 90%;
@@ -90,26 +91,20 @@ body{
     margin: 30px auto;
     color: purple;
 }
-
+/*pick your poison title*/
 .Title {
     background-color: lightblue;
 }
 
-#score {
+#player_score {
     color: green;
     font-weight: bold;
 }
 
-#incorrect {
+#computer_score {
     color: red;
     font-weight: bold;
 }
-
-.answer-message {
-    display: none;
-    font-size: 1rem;
-}
-
 
 .scores {
     display: inline-block;
@@ -128,7 +123,7 @@ body{
     padding-right: 5px;
 }
 
-/* --------- Buttons */
+/* --------- Buttons-alter design aspects to tailor */
 
 .btn {
     width: 220px;
@@ -203,12 +198,14 @@ body{
     border-color: green;
     color: green;
 }
-/*Spock button*/
+
 .btn--green:active,
 .btn--green:hover {
     background-color: darkgreen;
     color: white;
 }
+
+/*Spock button*/
 
 .btn--gray {
     margin-top: 25px;
@@ -243,14 +240,6 @@ body{
         left: -0.7rem;
     }
 
-    .answer-message {
-        display: block;
-    }
-
-    #answer-box {
-        display: block;
-        margin: 0 auto;
-    }
     .btn--gray {
         margin-top: 0;
     }
