@@ -46,6 +46,8 @@ document.addEventListener("DOMContentLoaded", function()) {
             else if (this.getAttribute("data-choice") === "4" {
                 alert("You chose Spock!");
             }
+            let gameType=this.getAttribute("data-choice");
+            alert `You clicked ${gameType})`;
 }
 
 
@@ -161,20 +163,4 @@ function checkAnswer () {
 }
 
 /**
- * Scoreboard section
- */
 
-/**
- * Gets the current score from the DOM and increments it by 1
- */
-
-function incrementScore () {
-let oldScore= parseInt(document.getElementById("score").innerText);
-document.getElementById("score").innerText= ++oldScore;
-}
-/**
- * Gets the current tally of times the lizard won the game from the DOM and increments it by 1
- */
-function incrementWrongAnswer () {
-    let oldScore= parseInt(document.getElementById("incorrect").innerText);
-    document.getElementById("incorrect").innerText= ++oldScore};
