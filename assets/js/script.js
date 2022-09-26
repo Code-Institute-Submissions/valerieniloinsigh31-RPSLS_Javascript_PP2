@@ -1,3 +1,8 @@
+/**
+ * Setting up singular functions with one main task-single responsibility principle.
+ * As per 'Love Math', I sketch out a page in my Balsamiq wireframes outlining the singular JS
+ * functions that I believed that I would need to have in my design
+ */
 
 
 /**
@@ -26,30 +31,14 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * Tailoring the pop-up messages to the button selected by user, based on data choice.
  * Setting the gametype based on the button selected by user
  */
-document.addEventListener("DOMContentLoaded", function()) {
-    let buttons = getElementsByTagName("button");
+ document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
 
-    for (let i=0, i < buttons.length, i++) {
-        buttons.addEventListener("click"), function () {
-            if (this.getAttribute("data-choice") === "0" {
-                alert("You chose Rock!");
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+                let gameType = this.getAttribute("data-choice");
+                alert(`You clicked ${gameType}`);
             }
-            else if (this.getAttribute("data-choice") === "1" {
-                alert("You chose Paper!");
-            }
-            else if (this.getAttribute("data-choice") === "2" {
-                alert("You chose Scissors!");
-            }
-            else if (this.getAttribute("data-choice") === "3" {
-                alert("You chose Lizard!");
-            }
-            else if (this.getAttribute("data-choice") === "4" {
-                alert("You chose Spock!");
-            }
-            let gameType=this.getAttribute("data-choice");
-            alert `You clicked ${gameType})`;
-}
-
 
 /**
  * commented out code from scope video
@@ -163,4 +152,38 @@ function checkAnswer () {
 }
 
 /**
+
+
+/**
+ * Empty functions that I think I need
+ */
+
+ //runGame();
+ //checkAnswer();
+ //calculateWinningAnswer;
+ //(how many variations
+ //5 choices for user, 5 choices for computer...1-5=25choices)
+ //incrementScore(); (if user wins)
+ //incrementWrongAnswer(); (if lizard wins)
+ 
+function runGame () {
+
+};
+
+function CheckAnswer () {
+
+}
+
+
+function calculateWinningAnswer () {
+
+}
+
+function incrementScore () {
+
+}
+
+function incrementWrongAnswer () {
+
+}
 
