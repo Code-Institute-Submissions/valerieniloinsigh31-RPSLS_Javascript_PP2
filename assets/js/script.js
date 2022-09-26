@@ -7,21 +7,43 @@
 const buttons = document.getElementsByClassName("control");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
+
+/**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper or scissors was selected) */
+
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
+
+/**Message prompted is different based on whether the player or the computer wins*/
 const messages = document.getElementById("messages");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 
 /**
+ * Ensures function does not start until the DOM has loaded
  * Add event listeners to all of the buttons
+ * Using the addEventListener from 'Love Maths' as getElementByTagName allows us to iterate
+ * through an array
  */
- document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function()) {
+    let buttons = getElementsByTagName("button");
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            let playerChoice = this.getAttribute("data-choice");
-            playGame(playerChoice);
-        });}
+    for (let i=0, i < buttons.length, i++) {
+        buttons.addEventListener("click"), function () {
+            
+        }
+    }
+}
+
+
+/**
+ * commented out code from scope video
+ */
+ //document.addEventListener("DOMContentLoaded", function() {
+
+    //for (let button of buttons) {
+        //button.addEventListener("click", function() {
+            //let playerChoice = this.getAttribute("data-choice");
+            //playGame(playerChoice);
+        //});}
 
 /**
  * The main game function. Accepts one parameter, which
@@ -48,20 +70,44 @@ let computerChoice= Math.floor(Math.random()*5);
 
 
 
+/**
+ * Message Pop-Ups. Need to define 'isCorrect' to follow along with the rules of the game
+ */
+ if(isCorrect) {
+    alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
+    incrementScore();
+} else {
+    alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the Dom beat you this time!`);
+    incrementWrongAnswer();
+}
 
-//BELOW CODE ALL EXTRACTED FROM LOVE MATHS
-//Wait for the DOM to finish loading before running the game
-//Get the button elements and add event listeners to them
+runGame(calculatedAnswer[1]);
+}
 
+/**
+ * Scoring system
+ */
 
 
 /**
- * The main game "loop" called when the script is first loaded
- * and after the user's answer has been processed
+ * Gets the current score from the DOM and increments it by 1
  */
-,function runGame (gameType) {
-document.getElementById ("answer-box").value= "";
-document.getElementById ("answer-box").focus();
+
+ function incrementScore () {
+    let oldScore= parseInt(document.getElementById("score").innerText);
+    document.getElementById("score").innerText= ++oldScore;
+    }
+    /**
+     * Gets the current tally of times the Lizard won the game of RPSLS from the DOM and increments it by 1
+     */
+    function incrementWrongAnswer () {
+        let oldScore= parseInt(document.getElementById("incorrect").innerText);
+        document.getElementById("incorrect").innerText= ++oldScore};
+    
+
+
+
+//BELOW CODE ALL EXTRACTED FROM LOVE MATHS
 
 // Presents the players choice and the computer's choice and assesses the winner.
 //Insert variables and if else for each possible answer
@@ -82,16 +128,26 @@ function checkAnswer () {
      * and the computer answer
      */
 
+
+    /**
+     * code for message pop-ups
+     */
+
+
     if(isCorrect) {
         alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
         incrementScore();
     } else {
-        alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the Dom beat you this time!`);
+        alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the DO, beat you this time!`);
         incrementWrongAnswer();
     }
 
     runGame(calculatedAnswer[1]);
 }
+
+/**
+ * Scoreboard section
+ */
 
 /**
  * Gets the current score from the DOM and increments it by 1
@@ -102,7 +158,7 @@ let oldScore= parseInt(document.getElementById("score").innerText);
 document.getElementById("score").innerText= ++oldScore;
 }
 /**
- * Gets the current tally of incorrect answers from the DOM and increments it by 1
+ * Gets the current tally of times the lizard won the game from the DOM and increments it by 1
  */
 function incrementWrongAnswer () {
     let oldScore= parseInt(document.getElementById("incorrect").innerText);
