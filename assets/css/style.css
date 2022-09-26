@@ -13,7 +13,7 @@ body{
 /*Header and footer*/
  header{
     text-align:center;
-    height:50px;
+    height:100px;
  }
  footer{
     position:absolute;
@@ -39,7 +39,9 @@ body{
     margin-top:1%;
     text-align: center;
 }
-.control{
+
+/*Not sure what below is*/
+.control {
     display: inline-block;
     margin:2px;
     width:80px;
@@ -81,15 +83,15 @@ body{
     width: 90%;
     font-size: 1.2rem;
 }
-
+/*Container of 'Your Score', 'Lizard Score' and spock images*/
 .controls-area {
-    width: 85%;
+    width: 100%;
     margin: 30px auto;
     color: purple;
 }
 
 .Title {
-    background-color: whitesmoke;
+    background-color: lightblue;
 }
 
 #score {
