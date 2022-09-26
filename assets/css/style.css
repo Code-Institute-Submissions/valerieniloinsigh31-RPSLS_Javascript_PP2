@@ -26,7 +26,7 @@ body{
     padding-top:25px;
     text-align:center;
     color:red;
-    background-color:aliceblue;
+    background-color:aquamarine;
     font-size:small;
  }
 
@@ -46,6 +46,7 @@ body{
     height:40px;
 }
 
+/*Pop up win/lost messages that aid the user's understanding*/
 #messages {
     height:20px;
 }
