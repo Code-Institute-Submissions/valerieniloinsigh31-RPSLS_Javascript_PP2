@@ -22,15 +22,30 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * Add event listeners to all of the buttons
  * Using the addEventListener from 'Love Maths' as getElementByTagName allows us to iterate
  * through an array
+ * 
+ * Tailoring the pop-up messages to the button selected by user, based on data choice.
+ * Setting the gametype based on the button selected by user
  */
 document.addEventListener("DOMContentLoaded", function()) {
     let buttons = getElementsByTagName("button");
 
     for (let i=0, i < buttons.length, i++) {
         buttons.addEventListener("click"), function () {
-            
-        }
-    }
+            if (this.getAttribute("data-choice") === "0" {
+                alert("You chose Rock!");
+            }
+            else if (this.getAttribute("data-choice") === "1" {
+                alert("You chose Paper!");
+            }
+            else if (this.getAttribute("data-choice") === "2" {
+                alert("You chose Scissors!");
+            }
+            else if (this.getAttribute("data-choice") === "3" {
+                alert("You chose Lizard!");
+            }
+            else if (this.getAttribute("data-choice") === "4" {
+                alert("You chose Spock!");
+            }
 }
 
 
