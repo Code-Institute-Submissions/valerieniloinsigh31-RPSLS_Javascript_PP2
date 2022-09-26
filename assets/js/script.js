@@ -100,6 +100,8 @@ runGame(calculatedAnswer[1]);
 
 /**
  * Scoring system
+ *  When logic is defined/written for what destroys what, ensure to put incrementScore/incrementWrongChoice
+ * functions into the correct places so that they are called once needed
  */
 
 
@@ -108,16 +110,18 @@ runGame(calculatedAnswer[1]);
  */
 
  function incrementScore () {
-    let oldScore= parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText= ++oldScore;
+    let oldScore= parseInt(document.getElementById("player_score").innerText);
+    document.getElementById("player_score").innerText= ++oldScore;
     }
     /**
      * Gets the current tally of times the Lizard won the game of RPSLS from the DOM and increments it by 1. Need to define 
-     * incrementWrongChoice at some point
+     * incrementWrongChoice at some point. Need to call these functions at appropriate times, e.g. if user has selected an options
+     * that destroys computer/Lizard's option, incrementScore will be updated. If computer/Lizard's option destorys user's
+     * option, incrementWrongChoice will be called
      */
     function incrementWrongChoice () {
-        let oldScore= parseInt(document.getElementById("wrong_choice").innerText);
-        document.getElementById("wrong_choice").innerText= ++oldScore};
+        let oldScore= parseInt(document.getElementById("computer_score").innerText);
+        document.getElementById("computer_score").innerText= ++oldScore};
     
     /** 
      * code needs to be added here that apply the rules of the rpsls game, what beats what. Also, define both the user answer 
@@ -129,11 +133,12 @@ runGame(calculatedAnswer[1]);
  * Empty functions that I think I need
  */
  //runGame();
- //displayUserAnswer();
- //displayLizardAnswer();
+ //displayUserAnswer();-turn selection into corresponding image saved in images folder
+ //displayLizardAnswer();-generate random selection from computer and turn into correspdoning image saved in images folder
  //compareAnswers();
  //incrementScore(); (if user wins)
  //incrementWrongChoice(); (if lizard wins)
+ //bestofThree-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
  
 function runGame () {
 let playerChoice=clickedButton;
