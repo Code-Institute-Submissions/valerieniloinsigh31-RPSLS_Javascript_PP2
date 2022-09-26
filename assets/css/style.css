@@ -1,6 +1,3 @@
-/*Font url*/
-@import url('https://fonts.googleapis.com/css2?family=0tomanopee+0ne&display=swap');
-
 /* -- Real PP2 Javascript Rock, Paper, Scissors, Lizard, Spock Project */
 /*Main view set-up*/
 html {
@@ -8,7 +5,7 @@ html {
     position:relative;
 }
 body{
-    font-family: '0tomanopee One', sans-serif;
+    font-family: 'Bungee Spice', serif;
     margin:0;
     background-color:aqua;
     background-image: url(/assets/images/colorful_lizard.jpeg);
