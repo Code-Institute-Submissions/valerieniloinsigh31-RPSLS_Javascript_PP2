@@ -9,11 +9,11 @@
  * Declare constants for DOM elements 
  * and possible choices
  */
-const buttons = document.getElementsByClassName("control");
+const buttons= document.getElementById("controls");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 
-/**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper or scissors was selected) */
+/**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected) */
 
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
@@ -31,25 +31,16 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * Tailoring the pop-up messages to the button selected by user, based on data choice.
  * Setting the gametype based on the button selected by user
  */
+
  document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-        if(this.getAttribute("data-choice") === "0") {
-            alert("You chose Rock!");
-        } else if (this.getAttribute("data-choice") === "1") {
-            alert("You chose Paper!");
-        } else if (this.getAttribute("data-choice") === "2") {
-            alert("You chose Scissors!");
-        } else if (this.getAttribute("data-choice") === "3") {
-                alert("You chose Lizard!");
-        } else if (this.getAttribute("data-choice") === "4") {
-                alert("You chose Spock!");
+                alert("You made your choice!");
             }
         });
-    }
-});
+    
 /**
  * commented out code from scope video
  */
@@ -71,7 +62,10 @@ function playGame(playerChoice) {
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt= choices[playerchoice];
 }
-
+/**
+ * How do I link the computerChoice in with an array? do I use parseint to make the strings numbers? How do I
+ * tie the rnadomly generated number in with the choice array?
+ */
 let computerChoice= Math.floor(Math.random()*5);
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;
     computerImage.alt= choices[computerchoice];
@@ -122,26 +116,9 @@ runGame(calculatedAnswer[1]);
      * incrementWrongChoice at some point
      */
     function incrementWrongChoice () {
-        let oldScore= parseInt(document.getElementById("incorrect").innerText);
-        document.getElementById("incorrect").innerText= ++oldScore};
+        let oldScore= parseInt(document.getElementById("wrong_choice").innerText);
+        document.getElementById("wrong_choice").innerText= ++oldScore};
     
-
-//BELOW CODE ALL EXTRACTED FROM LOVE MATHS
-
-// Presents the players choice and the computer's choice and assesses the winner.
-//Insert variables and if else for each possible answer
-
-/**
- * Checks the answer against the first element in the 
- * returned calculateCorrectAnswer array
- */
-
-function checkAnswer () {
-    let userAnswer= document.getElementById("answer-box").value;
-    //change calculateAnswer so that it is randomly generated computer answer
-    //let calculateWinningAnser = ();
-    //let isCorrect = userAnswer === calculateWinningAnswer[0];
-
     /** 
      * code needs to be added here that apply the rules of the rpsls game, what beats what. Also, define both the user answer 
      * and the computer answer
@@ -151,24 +128,27 @@ function checkAnswer () {
 /**
  * Empty functions that I think I need
  */
-
  //runGame();
- //checkAnswer();
- //calculateWinningAnswer;
- //(how many variations
- //5 choices for user, 5 choices for computer...1-5=25choices)
+ //displayUserAnswer();
+ //displayLizardAnswer();
+ //compareAnswers();
  //incrementScore(); (if user wins)
  //incrementWrongChoice(); (if lizard wins)
  
 function runGame () {
-
+let playerChoice=clickedButton;
+let computerChoice=Math.floor(Math.random()*5);
 };
 
-function CheckAnswer () {
+function displayUserAnswer () {
 
 }
 
-function calculateWinningAnswer () {
+function displayLizardAnswer () {
+
+}
+
+function compareAnswers () {
 
 }
 
@@ -176,25 +156,10 @@ function incrementScore () {
 
 }
 
-function incrementWrongAnswer () {
+function incrementWrongChoice () {
 
 }
 
-function displayComputerRock () {
+function bestOfThree () {
 
-}
-
-function displayComputerPaper () {
-    
-}
-
-function displayComputerScissors () {
-    
-}
-
-function displayComputerLizard () {
-    
-}
-function displayComputerSpock () {
-    
 }
