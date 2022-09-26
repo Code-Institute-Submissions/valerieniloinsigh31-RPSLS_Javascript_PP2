@@ -40,7 +40,7 @@ body{
     text-align: center;
 }
 
-/*Not sure what below is*/
+/*Not sure what below is-is this the buttons?*/
 .control {
     display: inline-block;
     margin:2px;
@@ -53,24 +53,25 @@ body{
     height:20px;
 }
 
+/*container for the player section*/
 .player {
     background-color: lightblue;
     float:left;
     width:45%;
 }
-
+/*player image-default set to opaque image of Spock-consider the image changing once option is selected*/
 #player-image {
     width:15vw;
     margin-bottom:40%;
     opacity:100%;
 }
-
+/*container for the computer 'Lizard' player*/
 .computer {
     background-color: lightblue;
     float:right;
     width:45%;
 }
-
+/*computer/Lizard's image-default set to transparent version of Spock*/
 #computer-image {
     width:15vw;
     padding:auto;
