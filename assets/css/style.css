@@ -22,7 +22,7 @@ body{
     bottom:0;
     box-sizing:border-box;
     min-height:30px;
-    overflow:auto;
+    overflow:none;
     padding-top:25px;
     text-align:center;
     color:red;
@@ -53,28 +53,31 @@ body{
 .player {
     background-color: lightblue;
     float:left;
-    width:30%;
+    width:45%;
 }
 
 #player-image {
     width:15vw;
-    padding: auto;
+    margin-bottom:40%;
+    opacity:100%;
 }
 
 .computer {
     background-color: lightblue;
     float:right;
-    width:30%;
+    width:45%;
 }
 
 #computer-image {
     width:15vw;
     padding:auto;
+    margin-bottom:40%;
+    opacity:15%;
 }
 
 .score-area {
     margin: 5px auto;
-    width: 80%;
+    width: 90%;
     font-size: 1.2rem;
 }
 
