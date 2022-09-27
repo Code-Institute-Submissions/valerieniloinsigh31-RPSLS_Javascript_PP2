@@ -30,7 +30,7 @@ body{
     font-size:small;
  }
 
- /*Game area-using relative values-responsive without using media queries*/
+ /*Game area, control section and welcome-using relative values-responsive without using media queries*/
 
 .game-area {
     width:75%;
@@ -40,12 +40,16 @@ body{
     text-align: center;
 }
 
-/*Not sure what below is-is this the buttons?*/
 .control {
     display: inline-block;
     margin:2px;
     width:80px;
     height:40px;
+}
+
+#welcome {
+font-size:medium;
+color:black;
 }
 
 /*Pop up win/lost messages that aid the user's understanding*/
@@ -111,7 +115,7 @@ body{
     padding: 25px;
 }
 
-/* --------- Heading */
+/* --------- Heading and logo */
 
 .heading {
     text-align: center;
@@ -219,7 +223,7 @@ body{
     background-color: #0d1013;
 }
 
-/* --------- Media queries */
+/* --------- Media queries-only two listed here 414px versus 320px, do we need more */
 
 @media (max-width: 414px) {
     .controls-area {

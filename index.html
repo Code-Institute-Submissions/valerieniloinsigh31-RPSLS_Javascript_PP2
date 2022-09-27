@@ -21,39 +21,42 @@ body {
   />
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <script src="https://kit.fontawesome.com/7aab5ae5f2.js" crossorigin="anonymous"></script>
-    <title>Rock, Paper, Scissors, Lizard or Spock-no partners</title>
+    <title>Rock, Paper, Scissors, Lizard or Spock</title>
 </head>
 <body>
     <h1 class="heading">
-        <img class="logo" src="assets/images/colorful_lizard.jpeg" alt="Lizard graphic"> Rock, Paper, Scissors, Lizard, Spock
-        <img class="logo" src="assets/images/colorful_lizard.jpeg" alt="Lizard graphic"> </h1>
+        <img class="logo" src="assets/images/lizard.png" alt="Lizard graphic"> Rock, Paper, Scissors, Lizard, Spock
+        <img class="logo" src="assets/images/lizard.png" alt="Lizard graphic"> </h1>
+        <!--Game area-->
     <div class="game-area">
         <div class="controls-area">
             <div class="Title"><h2 class="animate__animated animate__rubberBand animate__slow">Pick your poison!</h2></div>
-            
-            <button id="controls" data-choice="0" class="btn btn--big btn--blue" aria-label="Rock">
+            <p id = "welcome">Welcome!<br>Press a button to see can you beat the Lizard. Rules at bottom.</p>
+            <!--Game buttons-->
+            <button id="controls" data-choice="rock" class="btn btn--big btn--blue" aria-label="Rock">
             <i class="fa-regular fa-hand-back-fist"></i></button>
-            <button id="controls" data-choice="1" class="btn btn--big btn--orange" aria-label="Paper">
+            <button id="controls" data-choice="paper" class="btn btn--big btn--orange" aria-label="Paper">
             <i class="fa-regular fa-hand"></i></button>
-            <button id="controls" data-choice="2" class="btn btn--big btn--red" aria-label="Scissors">
+            <button id="controls" data-choice="scissors" class="btn btn--big btn--red" aria-label="Scissors">
             <i class="fa-regular fa-hand-scissors"></i></button>
-            <button id="controls" data-choice="3" class="btn btn--big btn--green" aria-label="Lizard">
+            <button id="controls" data-choice="lizard" class="btn btn--big btn--green" aria-label="Lizard">
             <i class="fa-solid fa-hand-lizard"></i></button>
-            <button id="controls" data-choice="4" class="btn btn--big btn--gray" aria-label="Spock">
+            <button id="controls" data-choice="spock" class="btn btn--big btn--gray" aria-label="Spock">
             <i class="fa-solid fa-hand-spock"></i></button>
             </div>
 
             <div id="messages"></div>
-
+            <!--Scoring section-->
             <div class="player">
             <h3 class="scores"> <i class="fa-regular fa-thumbs-up"></i> Your score: <span id="player_score">0</span></h3>
-            <img id="player-image" src="assets/images/spock_toy.jpeg" alt="A cartoon spock displaying famous hand gesture"> 
+            <img id="player-image" src="assets/images/spock.png" alt="A cartoon spock displaying famous hand gesture"> 
             </div>
             <div class="computer">
-            <h3 class="scores"> <i class="fa-regular fa-thumbs-down"></i> Lizard score: <span id="computer_score">0</span></h3>
-            <img id="computer-image" src="assets/images/spock_toy.jpeg" alt="A cartoon spock displaying famous hand gesture">
+            <h3 class="scores"> <i class="fa-regular fa-thumbs-down"></i> Lizard's score: <span id="computer_score">0</span></h3>
+            <img id="computer-image" src="assets/images/spock.png" alt="A cartoon spock displaying famous hand gesture">
             </div>
             <hr>
+            <!--Footer with rules-->
             <footer class="footer">
                 <p>Rules of the game:</p>
                 <ol>
@@ -64,6 +67,9 @@ body {
                     <li>Spock destroys rock and scissors<i class="fa-solid fa-hand-spock"></i></li>
                 </ol>
             </footer>
+            <!--Javascript link-->
    <script src="assets/js/script.js"></script> 
+   <!--slot in external links to fb, insta, twitter, youtube-->
+
 </body>
 </html>
