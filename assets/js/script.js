@@ -15,8 +15,8 @@
 const playerScore = document.getElementById("player_score");//variable used in scoring system at end
 const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
 
-playerScore=0;//this will be incremented on later
-computerScore=0;//this will be incremented on later
+playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
+computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
 
 /**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected)
  * For each of the images, what needs to be done is the image will update based on what playerChoice and computerChoices were
@@ -44,6 +44,7 @@ const messages = document.getElementById("messages");
  */
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 const computerChoice = choices[Math.floor(Math.random()*5)];//should generate rnadom number within index 0-4
+//const playerChoice = data.choice of button (declared below)
 
 /**
  * Ensures function does not start until the DOM has loaded
@@ -140,58 +141,58 @@ function runGame(playerChoice) {
 
 //for below compare function...compares index numbers
 
-function compare(playerChoice, computerChoice){
-   if (playerChoice === computerChoice) {
-       answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>You are tied!`
-   } else if (playerChoice === "rock") {
-       if (computerChoice === "paper"){
-           answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br> Paper beats Rock. You lose this time!`
-       } else if (computerChoice === "scissors"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You win this time!`
-       } else if (computerChoice === "lizard"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Lizard. You win this time!`
+function compare(choices[playerChoice], choices[computerChoice]){
+   if (choices[playerChoice] === choices[computerChoice]) {
+       answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>You are tied!`
+   } else if (choices[playerChoice] === "rock") {
+       if (choices[computerChoice] === "paper"){
+           answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br> Paper beats Rock. You lose this time!`
+       } else if (choices[computerChoice] === "scissors"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Scissors. You win this time!`
+       } else if (choices[computerChoice] === "lizard"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Lizard. You win this time!`
        } else {
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Rock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Rock. You lose this time!`
        }
-   } else if (playerChoice === "paper") {
-       if (computerChoice === "scissors"){
-         answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Paper. You lose this time!`
-       } else if (computerChoice === "lizard"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Paper. You lose this time!`
-       } else if (computerChoice === "spock"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You win this time!`
+   } else if (choices[playerChoice] === "paper") {
+       if (choices[computerChoice] === "scissors"){
+         answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Scissors beats Paper. You lose this time!`
+       } else if (choices[computerChoice] === "lizard"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Lizard beats Paper. You lose this time!`
+       } else if (choices[computerChoice] === "spock"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Spock. You win this time!`
        } else {
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Rock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Rock. You win this time!`
        }
-   } else if (playerChoice === "scissors") {
-       if (computerChoice === "rock"){
-            answer = `You chose: ${playerchoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You lose this time!`
-       } else if (computerChoice === "paper"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Paper. You win this time!`
-       } else if (computerChoice === "lizard"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Lizard. You win this time!`
+   } else if (choices[playerChoice] === "scissors") {
+       if (choices[computerChoice] === "rock"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lose this time!`
+       } else if (choices[computerChoice] === "paper"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Scissors beats Paper. You win this time!`
+       } else if (choices[computerChoice] === "lizard"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Scissors beats Lizard. You win this time!`
        } else {
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Scissors. You lose this time!`
        }
-   } else if (playerChoice === "lizard") {
-       if (computerChoice === "rock"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You lose this time!`
-       } else if (computerChoice === "paper"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Paper. You win this time!`
-       } else if (computerChoice === "spock"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Spock. You win this time!`
+   } else if (choices[playerChoice] === "lizard") {
+       if (choices[computerChoice] === "rock"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lose this time!`
+       } else if (choices[computerChoice] === "paper"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Lizard beats Paper. You win this time!`
+       } else if (choices[computerChoice] === "spock"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Lizard beats Spock. You win this time!`
        } else {
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Lizard. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Lizard. You lose this time!`
        }
-   }  else if (playerChoice === "spock") {
-       if (computerChoice === "rock"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Rock. You win this time!`
-       } else if (computerChoice === "paper"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You lose this time!`
-       } else if (computerChoice === "scissors"){
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Scissors. You win this time!`
+   }  else if (choices[playerChoice] === "spock") {
+       if (choices[computerChoice] === "rock"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Rock. You win this time!`
+       } else if (choices[computerChoice] === "paper"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Spock. You lose this time!`
+       } else if (choices[computerChoice] === "scissors"){
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Scissors. You win this time!`
        } else {
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Spock. You lose this time!`
        }
    }
    result (answer);
