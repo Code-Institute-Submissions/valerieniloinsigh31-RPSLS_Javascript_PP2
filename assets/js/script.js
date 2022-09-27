@@ -156,10 +156,10 @@ let computerWinner=
  //1. runGame();
  //2. displayUserAnswer();-turn selection into corresponding image saved in images folder
  //3. displayLizardAnswer();-generate random selection from computer and turn into correspdoning image saved in images folder
- //4. checkWinner();= a compare function
+ //4. checkWinner();= a compare function that compares playerChoice to computerChoice and determines a winner
  //5. incrementScore(); (if user wins)
  //6. incrementWrongChoice(); (if lizard wins)
- //7. bestofThree-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
+ //7. bestofThree&reset-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
  
  //1.
 function runGame () {
@@ -178,21 +178,60 @@ function displayLizardAnswer () {
 }
 
 //4.
-function compareAnswers () {
+function checkWinner () {
 
 }
 
 //5.
 function incrementScore () {
-
-}
+    let oldScore= parseInt(document.getElementById("player_score").innerText);
+    document.getElementById("player_score").innerText= ++oldScore;
+    }
 
 //6.
 function incrementWrongChoice () {
+    let oldScore= parseInt(document.getElementById("computer_score").innerText);
+    document.getElementById("computer_score").innerText= ++oldScore};
+
+//7.
+function bestOfThree () {
 
 }
 
-/7.
-function bestOfThree () {
+
+//Code taken from slack to draw inspiration from:
+
+/**
+ * Takes userInput from event activation and assigns a value to it.
+ * Computer answer is generated from a random number and an assigned value.
+ */
+ function runGame (userInput){
+    
+    console.log(userInput)
+
+    let compInput = Math.floor(Math.random()*5)+1;
+    switch(compInput){
+        case 1: compInput = "rock";
+        break;
+        case 2 : compInput = "paper";
+        break;
+        case 3 : compInput = "scissors";
+        break;
+        case 4 : compInput = "lizard";
+        break;
+        case 5 : compInput = "spock";
+        break;
+    }
+    console.log(compInput)
+}
+
+/**
+ * Takes the values of the user input and computer choice and compares them.
+ * Decides who has won the round.
+ */
+ function compare(userInput, compInput){
+    if (userInput === compInput){
+        console.log('tie')
+    }
 
 }
