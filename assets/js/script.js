@@ -5,15 +5,14 @@
  * scope video.
  */
 
-
 /**
  * Declaration of constants with global scope for DOM elements 
  * and possible choices. Because these are global scope,
  * will apply to the full page of Javascript
  */
 
-const playerScore = document.getElementById("player_score");//variable used in scoring system at end
-const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
+const playerScoreDom = document.getElementById("player_score");//variable used in scoring system at end
+const computerScoreDom = document.getElementById("computer_score");//variable used in scoring system at end
 
 playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
 computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
@@ -43,7 +42,7 @@ const messages = document.getElementById("messages");
  * generate simultaneously:
  */
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
-const computerChoice = choices[Math.floor(Math.random()*5)];//should generate rnadom number within index 0-4
+const computerChoice = choices[Math.floor(Math.random()*5)];//should generate random number within index 0-4
 //const playerChoice = data.choice of button (declared below)
 
 /**
@@ -56,7 +55,7 @@ const computerChoice = choices[Math.floor(Math.random()*5)];//should generate rn
  * playerChoice defined
  */
  document.addEventListener("DOMContentLoaded", function(){
-   
+   const button = document.getElementByClassName("controls");
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");
@@ -82,6 +81,7 @@ const computerChoice = choices[Math.floor(Math.random()*5)];//should generate rn
 function runGame(playerChoice) {
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
+    console.log(`assets/images/${choices[playerChoice]}.png`);
     playerImage.alt= choices[playerChoice];
 
 /**
@@ -196,6 +196,20 @@ function compare(choices[playerChoice], choices[computerChoice]){
        }
    }
    result (answer);
+}
+
+/**
+ * 
+ */
+
+/**
+ * Takes the returned value of the compare function and displays it into the game-text.
+ */
+ function result(answer){
+    let gameEnd = document.getElementById("welcome");
+    gameEnd.innerHTML = outcome.toUpperCase();
+
+    incrementScore();
 }
 
 /**
