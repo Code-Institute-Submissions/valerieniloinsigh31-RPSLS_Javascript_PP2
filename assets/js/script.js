@@ -29,7 +29,9 @@ const playerImage = document.getElementById("player-image");//this will change b
 const computerImage = document.getElementById("computer-image");//this will change based on computerChoice so filepaths need
 //to be named correctly
 
-/**Message prompted is different based on whether the player or the computer wins*/
+/**Message prompted is different based on whether the player or the computer wins-maybe use just one message once best of three 
+ * function applied
+*/
 const messages = document.getElementById("messages");
 /**
  * The different choices available to the user to select and, one of which, the computer will randomly 
@@ -43,8 +45,8 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * 
  * Defining playerChoice by the option selected by the user-
  * inspired by the scope video
- * Pay attention to the 'runGame', where is this 
- * defined
+ * Pay attention to the 'runGame'
+ * playerChoice defined
  */
 
  document.addEventListener("DOMContentLoaded", function() {
@@ -58,7 +60,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
     
 /**
  * The main game function, which is a parameter used in the above playerChoice function.
- * . Accepts one parameter, which
+ * Accepts one parameter, which
  * in the button function
  * is the data-choice value of the selected button
  * ties the images in with the choices
@@ -69,20 +71,35 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * the idea here is the '$choices[playerChoice]' will change based on what player chose and then match filepath, e.g.
  * rock, paper, scissors, lizard or spock
  */
-function playGame(playerChoice) {
+function runGame(playerChoice) {
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;
     playerImage.alt= choices[playerchoice];
-}
+
 /**
  * Defining the computer choice to be randomly generated-5 choices to choose form in the array (0,1,2,3,4)
- * Additionally, as per player choice, the correct corresponding inage should be triggered once selection is made
+ * used a switch in this instance and equated the choices to cases
+ * Additionally, as per player choice, the correct corresponding image should be triggered once selection is made
+ * Explain why I have used a switch
  */
-let computerChoice= Math.floor(Math.random()*5);
+let computerChoice= Math.floor(Math.random()*5)+1;
+switch(computerChoice){
+    case 1: computerChoice = "rock";
+    break;
+    case 2 : computerChoice = "paper";
+    break;
+    case 3 : computerChoice = "scissors";
+    break;
+    case 4 : computerChoice = "lizard";
+    break;
+    case 5 : computerChoice = "spock";
+    break;}
+
+
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;
     computerImage.alt= choices[computerchoice];
 
-    let result= checkWinner(choices[computerChoice], choices[playerChoice]);
+    let result= compare(choices[computerChoice], choices[playerChoice]);
 }
 
 /**
@@ -91,36 +108,124 @@ let computerChoice= Math.floor(Math.random()*5);
  * how do we write this compare function
  * how we display the parameters
  * 
- * This is a very important compare function that dictates who is defined as the winne from the player/computer
+ * This is a very important compare function that dictates who is defined as the winner from the player/computer
  * based on selected user chocie versus randomyl generated computer choice
  * can an 'if else' be used to define logic in both of these cases?
  * probably only need to define one...playerWinner
- * also need to define checkWinner function
+ * also need to define compare function
  */
 
-function checkWinner () {
+//function compare () {
+//}
+//let playerWinner=
+//if playerChoice=rock
+//let computerWinner=
 
+//code taken from slack to be adapted to my case, to be inspired by, not to copy directly:
+//summary of what we are doing: compare the two defined variables playerChoice and computerChoice
+//we use the term 'outcome' in this code, could we use 'result' instead
+//It takes the values of the playerChoice and computerChoice and compares them and then decides who has won the round
+//we use a long 'if else' statement to consider all of the potential outcomes/results
+//for the choices, take it one by one and have an else if for each of the alternatives in each case
+///**
+
+function compare(playerChoice, computerChoice){
+   if (playerChoice === computerChoice) {
+       answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>The result is a Tie!`
+   } else if (playerChoice === 'rock') {
+       if (computerChoice === 'paper'){
+           answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br> Paper beats Rock. You lose!`
+       } else if (computerChoice === 'scissors'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You win!`
+       } else if (computerChoice === 'lizard'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Lizard. You win!`
+       } else {
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Rock. You lose!`
+       }
+   } else if (playerChoice === 'paper') {
+       if (computerChoice === 'scissors'){
+         answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors cuts Paper. You lose!`
+       } else if (computerChoice === 'lizard'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard eats Paper. You lose!`
+       } else if (computerChoice === 'spock'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper disproves Spock. You win!`
+       } else {
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper covers Rock. You win!`
+       }
+   } else if (playerChoice === 'scissors') {
+       if (computerChoice === 'rock'){
+            answer = `You chose: ${playerchoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You lose!`
+       } else if (computerChoice === 'paper'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Paper. You win!`
+       } else if (computerChoice === 'lizard'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Lizard. You win!`
+       } else {
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Scissors. You lose!`
+       }
+   } else if (playerChoice === 'lizard') {
+       if (computerChoice === 'rock'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You lose!`
+       } else if (computerChoice === 'paper'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Paper. You win!`
+       } else if (computerChoice === 'spock'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Spock. You win!`
+       } else {
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Lizard. You lose!`
+       }
+   }  else if (playerChoice === 'spock') {
+       if (computerChoice === 'rock'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Rock. You win!`
+       } else if (computerChoice === 'paper'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You lose!`
+       } else if (computerChoice === 'scissors'){
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Scissors. You win!`
+       } else {
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beatss Spock. You lose!`
+       }
+   }
+   result (answer);
 }
 
-let playerWinner=
-if playerChoice=rock
-
-let computerWinner=
+/**
+ * Scoring code
+ */
 
 /**
- * Message Pop-Ups. Need to define 'playerWinner' to follow along with the rules of the game. There are a number of
+ * Score function. Increments the score of the computer or user.
+ * This code is based on the contents of the template literal options within the previous compare function code
+ * If the resulting answer includes 'win', then the playerScore is increased in increments of 1
+ * If the resulting answer includes 'lose', the Lizard's score increased in increments of 1
+ */
+
+ function incrementScore() {
+
+    if (answer.includes(`win`)){
+        playerScore++;
+    } else if (answer.includes(`lose`)){
+        computerScore++;
+    } else {
+        console.log('0')
+    }
+    document.getElementById("user-score").innerHTML = `Your Score:<br>${playerScore}`;
+    document.getElementById("comp-score").innerHTML = `Lizard's Score:<br>${computerScore}`;
+    
+    checkScore();
+}
+
+/**
+ * Message Pop-Ups. Need to define 'playerWinner' if user wins best of three to follow along with the rules of the game. There are a number of
  * situations in which the player could beat the computer. List all these. Use 'else if' then and all other situations
  * will prompt the second alert about the Lizard winning
  * The below 'if else' formula will dictate what message appears and whether the incrementScore function is triggered or
  * the incrementWrongChoice function is triggered
  */
- if(playerWinner) {
-    alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
-    incrementScore();
-} else {
-    alert (`Awww...you answered ${playerChoice}. The Lizard Queen of the Dom beat you this time!`);
-    incrementWrongChoice();
-}
+ //if(playerWinner) {
+    //alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
+    //incrementScore();
+//} else {
+    //alert (`Awww...you answered ${playerChoice}. The Lizard Queen of the Dom beat you this time!`);
+    //incrementWrongChoice();
+//}
 
 /**
  * Scoring system
@@ -146,12 +251,6 @@ let computerWinner=
     function incrementWrongChoice () {
         let oldScore= parseInt(document.getElementById("computer_score").innerText);
         document.getElementById("computer_score").innerText= ++oldScore};
-    
-    /** 
-     * code needs to be added here that apply the rules of the rpsls game, what beats what. Also, define both the user answer 
-     * and the computer answer
-     */
-
 
 /**
  * Empty functions that I think I need
@@ -165,44 +264,44 @@ let computerWinner=
  //7. bestofThree&reset-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
  
  //1.
-function runGame () {
-let playerChoice=clickedButton;
-let computerChoice=Math.floor(Math.random()*5);
-};
+//function runGame () {
+//let playerChoice=clickedButton;
+//let computerChoice=Math.floor(Math.random()*5);
+//};
 
 //2.
-function displayUserAnswer () {
+//function displayUserAnswer () {
 
-}
+//}
 
 //3.
-function displayLizardAnswer () {
+//function displayLizardAnswer () {
 
-}
+//}
 
 //4.
-function compare(playerChoice, computerChoice){
-    if (playerChoice === computerChoice){
-        console.log('You and the lizard have tied this time!')
-    }
+//function compare(playerChoice, computerChoice){
+    //if (playerChoice === computerChoice){
+        //console.log('You and the lizard have tied this time!')
+    //}
 
-}
+//}
 
 //5.
-function incrementScore () {
-    let oldScore= parseInt(document.getElementById("player_score").innerText);
-    document.getElementById("player_score").innerText= ++oldScore;
-    }
+//function incrementScore () {
+    //let oldScore= parseInt(document.getElementById("player_score").innerText);
+    //document.getElementById("player_score").innerText= ++oldScore;
+    //}
 
 //6.
-function incrementWrongChoice () {
-    let oldScore= parseInt(document.getElementById("computer_score").innerText);
-    document.getElementById("computer_score").innerText= ++oldScore};
+//function incrementWrongChoice () {
+    //let oldScore= parseInt(document.getElementById("computer_score").innerText);
+    //document.getElementById("computer_score").innerText= ++oldScore};
 
 //7.
-function bestOfThree () {
+//function bestOfThree () {
 
-}
+//}
 
 
 //Code taken from slack to draw inspiration from:
@@ -212,32 +311,32 @@ function bestOfThree () {
  * Computer answer is generated from a random number and an assigned value,
  * using a switch statement instead of 'if else'
  */
- function runGame (playerChoice){
+ //function runGame (playerChoice){
     
-    console.log(playerChoice)
+    //console.log(playerChoice)
 
-    let computerChoice = Math.floor(Math.random()*5)+1;
-    switch(computerChoice){
-        case 1: computerChoice = "rock";
-        break;
-        case 2 : computerChoice = "paper";
-        break;
-        case 3 : computerChoice = "scissors";
-        break;
-        case 4 : computerChoice = "lizard";
-        break;
-        case 5 : computerChoice = "spock";
-        break;
-    }
-    console.log(computerChoice)
-}
+    //let computerChoice = Math.floor(Math.random()*5)+1;
+    //switch(computerChoice){
+        //case 1: computerChoice = "rock";
+        //break;
+        //case 2 : computerChoice = "paper";
+        //break;
+        //case 3 : computerChoice = "scissors";
+        //break;
+        //case 4 : computerChoice = "lizard";
+        //break;
+        //case 5 : computerChoice = "spock";
+        //break;
+    //}
+    //console.log(computerChoice)
+//}
 
 /**
  * Takes the values of the playerChoice and computerChoice and compares them.
  * Decides who has won the round.
  */
- function compare(playerChoice, computerChoice){
-    if (playerChoice === computerChoice){
-        console.log('You and the lizard have tied this time!')
-    }
-}
+ //function compare(playerChoice, computerChoice){
+    //if (playerChoice === computerChoice){
+        //console.log('You and the lizard have tied this time!')
+    //}
+//}
