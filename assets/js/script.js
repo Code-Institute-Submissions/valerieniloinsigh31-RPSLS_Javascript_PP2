@@ -12,8 +12,8 @@
  * will apply to the full page of Javascript
  */
 const buttons= document.getElementById("controls");
-const playerScore = document.getElementById("player-score");
-const computerScore = document.getElementById("computer-score");
+const playerScore = document.getElementById("player-score");//variable used in scoring system at end
+const computerScore = document.getElementById("computer-score");//variable used in scoring system at end
 
 /**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected)
  * For each of the images, what needs to be done is the image will update based on what playerChoice and computerChoices were
@@ -24,8 +24,10 @@ const computerScore = document.getElementById("computer-score");
  * playerChoice and computerChoice
  */
 
-const playerImage = document.getElementById("player-image");
-const computerImage = document.getElementById("computer-image");
+const playerImage = document.getElementById("player-image");//this will change based on playerChoice so filepaths need to be 
+//named correctly
+const computerImage = document.getElementById("computer-image");//this will change based on computerChoice so filepaths need
+//to be named correctly
 
 /**Message prompted is different based on whether the player or the computer wins*/
 const messages = document.getElementById("messages");
@@ -41,7 +43,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * 
  * Defining playerChoice by the option selected by the user-
  * inspired by the scope video
- * Pay attention to the 'playGame' parameter, where is this 
+ * Pay attention to the 'runGame', where is this 
  * defined
  */
 
@@ -50,7 +52,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");
-                playGame(playerChoice);
+                runGame(playerChoice);
             }
         });
     
@@ -101,6 +103,7 @@ function checkWinner () {
 }
 
 let playerWinner=
+if playerChoice=rock
 
 let computerWinner=
 
@@ -115,7 +118,7 @@ let computerWinner=
     alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
     incrementScore();
 } else {
-    alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the Dom beat you this time!`);
+    alert (`Awww...you answered ${playerChoice}. The Lizard Queen of the Dom beat you this time!`);
     incrementWrongChoice();
 }
 
@@ -156,7 +159,7 @@ let computerWinner=
  //1. runGame();
  //2. displayUserAnswer();-turn selection into corresponding image saved in images folder
  //3. displayLizardAnswer();-generate random selection from computer and turn into correspdoning image saved in images folder
- //4. checkWinner();= a compare function that compares playerChoice to computerChoice and determines a winner
+ //4. compare();= a compare function that compares playerChoice to computerChoice and determines a winner
  //5. incrementScore(); (if user wins)
  //6. incrementWrongChoice(); (if lizard wins)
  //7. bestofThree&reset-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
@@ -178,7 +181,10 @@ function displayLizardAnswer () {
 }
 
 //4.
-function checkWinner () {
+function compare(playerChoice, computerChoice){
+    if (playerChoice === computerChoice){
+        console.log('You and the lizard have tied this time!')
+    }
 
 }
 
@@ -202,36 +208,36 @@ function bestOfThree () {
 //Code taken from slack to draw inspiration from:
 
 /**
- * Takes userInput from event activation and assigns a value to it.
- * Computer answer is generated from a random number and an assigned value.
+ * Takes playerChoice from event activation and assigns a value to it.
+ * Computer answer is generated from a random number and an assigned value,
+ * using a switch statement instead of 'if else'
  */
- function runGame (userInput){
+ function runGame (playerChoice){
     
-    console.log(userInput)
+    console.log(playerChoice)
 
-    let compInput = Math.floor(Math.random()*5)+1;
-    switch(compInput){
-        case 1: compInput = "rock";
+    let computerChoice = Math.floor(Math.random()*5)+1;
+    switch(computerChoice){
+        case 1: computerChoice = "rock";
         break;
-        case 2 : compInput = "paper";
+        case 2 : computerChoice = "paper";
         break;
-        case 3 : compInput = "scissors";
+        case 3 : computerChoice = "scissors";
         break;
-        case 4 : compInput = "lizard";
+        case 4 : computerChoice = "lizard";
         break;
-        case 5 : compInput = "spock";
+        case 5 : computerChoice = "spock";
         break;
     }
-    console.log(compInput)
+    console.log(computerChoice)
 }
 
 /**
- * Takes the values of the user input and computer choice and compares them.
+ * Takes the values of the playerChoice and computerChoice and compares them.
  * Decides who has won the round.
  */
- function compare(userInput, compInput){
-    if (userInput === compInput){
-        console.log('tie')
+ function compare(playerChoice, computerChoice){
+    if (playerChoice === computerChoice){
+        console.log('You and the lizard have tied this time!')
     }
-
 }
