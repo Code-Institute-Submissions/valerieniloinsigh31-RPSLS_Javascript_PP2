@@ -11,16 +11,17 @@
  * and possible choices. Because these are global scope,
  * will apply to the full page of Javascript
  */
-const buttons= document.getElementById("controls");//buttons activated and used to retrieve data-choice
-const playerScore = document.getElementById("player-score");//variable used in scoring system at end
-const computerScore = document.getElementById("computer-score");//variable used in scoring system at end
-playerScore=0;//this will be increment 
-computerScore=0;//this will be incremeted
+
+const playerScore = document.getElementById("player_score");//variable used in scoring system at end
+const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
+
+playerScore=0;//this will be incremented on later
+computerScore=0;//this will be incremented on later
 
 /**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected)
  * For each of the images, what needs to be done is the image will update based on what playerChoice and computerChoices were
  * selected. To do this, five images need to be saved to the images folder and code written so that the selection of a certain
- * choice pronpts this image to appear as opposed to any of the others. 'Src...used for this.'. The user image is 'player-image'
+ * choice prompts this image to appear as opposed to any of the others. 'Src...used for this.'. The user image is 'player-image'
  * and the computer image is 'computer-image'...is the code written in JS or CSS for which image to prompt? Try writing this code
  * in CSS using an 'if else' formular...prompting the different images based on the data choice in the case of both the
  * playerChoice and computerChoice
@@ -42,6 +43,7 @@ const messages = document.getElementById("messages");
  * generate simultaneously:
  */
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
+const computerChoice = choices[Math.floor(Math.random()*5)];//should generate rnadom number within index 0-4
 
 /**
  * Ensures function does not start until the DOM has loaded
@@ -53,8 +55,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * playerChoice defined
  */
  document.addEventListener("DOMContentLoaded", function(){
-    let buttons = document.getElementById("controls");
-
+   
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");
@@ -75,6 +76,7 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * "scissors", "lizard", "spock"
  * the idea here is the '$choices[playerChoice]' will change based on what player chose and then match filepath, e.g.
  * rock, paper, scissors, lizard or spock
+ * filepath name updated based on playerChoice number to index number in choices array
  */
 function runGame(playerChoice) {
 
@@ -87,7 +89,7 @@ function runGame(playerChoice) {
  * Additionally, as per player choice, the correct corresponding image should be triggered once selection is made
  * Explain why I have used a switch
  */
-let computerChoice= Math.floor(Math.random() * 5);
+//let computerChoice= Math.floor(Math.random() * 5);  this is already defined at beginning
 
 //commented out code, could also use a switch instead of math and array and index
 //switch(computerChoice){
@@ -136,60 +138,60 @@ let computerChoice= Math.floor(Math.random() * 5);
 //for the choices, take it one by one and have an else if for each of the alternatives in each case
 ///**
 
-//for below function, is it sufficient to say computerChoice...will that be word format...should parseInt be used
+//for below compare function...compares index numbers
 
 function compare(playerChoice, computerChoice){
    if (playerChoice === computerChoice) {
        answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>You are tied!`
-   } else if (playerChoice === 'rock') {
-       if (computerChoice === 'paper'){
+   } else if (playerChoice === "rock") {
+       if (computerChoice === "paper"){
            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br> Paper beats Rock. You lose this time!`
-       } else if (computerChoice === 'scissors'){
+       } else if (computerChoice === "scissors"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You win this time!`
-       } else if (computerChoice === 'lizard'){
+       } else if (computerChoice === "lizard"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Lizard. You win this time!`
        } else {
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Rock. You lose this time!`
        }
-   } else if (playerChoice === 'paper') {
-       if (computerChoice === 'scissors'){
+   } else if (playerChoice === "paper") {
+       if (computerChoice === "scissors"){
          answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Paper. You lose this time!`
-       } else if (computerChoice === 'lizard'){
+       } else if (computerChoice === "lizard"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Paper. You lose this time!`
-       } else if (computerChoice === 'spock'){
+       } else if (computerChoice === "spock"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You win this time!`
        } else {
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Rock. You win this time!`
        }
-   } else if (playerChoice === 'scissors') {
-       if (computerChoice === 'rock'){
+   } else if (playerChoice === "scissors") {
+       if (computerChoice === "rock"){
             answer = `You chose: ${playerchoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You lose this time!`
-       } else if (computerChoice === 'paper'){
+       } else if (computerChoice === "paper"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Paper. You win this time!`
-       } else if (computerChoice === 'lizard'){
+       } else if (computerChoice === "lizard"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Scissors beats Lizard. You win this time!`
        } else {
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Scissors. You lose this time!`
        }
-   } else if (playerChoice === 'lizard') {
-       if (computerChoice === 'rock'){
+   } else if (playerChoice === "lizard") {
+       if (computerChoice === "rock"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Scissors. You lose this time!`
-       } else if (computerChoice === 'paper'){
+       } else if (computerChoice === "paper"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Paper. You win this time!`
-       } else if (computerChoice === 'spock'){
+       } else if (computerChoice === "spock"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Lizard beats Spock. You win this time!`
        } else {
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Rock beats Lizard. You lose this time!`
        }
-   }  else if (playerChoice === 'spock') {
-       if (computerChoice === 'rock'){
+   }  else if (playerChoice === "spock") {
+       if (computerChoice === "rock"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Rock. You win this time!`
-       } else if (computerChoice === 'paper'){
+       } else if (computerChoice === "paper"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You lose this time!`
-       } else if (computerChoice === 'scissors'){
+       } else if (computerChoice === "scissors"){
             answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Spock beats Scissors. You win this time!`
        } else {
-            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beatss Spock. You lose this time!`
+            answer = `You chose: ${playerChoice}<br>The Lizard chose: ${computerChoice}<br>Paper beats Spock. You lose this time!`
        }
    }
    result (answer);
@@ -204,7 +206,8 @@ function compare(playerChoice, computerChoice){
  * This code is based on the contents of the template literal options within the previous compare function code
  * If the resulting answer includes 'win', then the playerScore is increased in increments of 1
  * If the resulting answer includes 'lose', the Lizard's score increased in increments of 1
- * the inner HTML & template literal will update the '0' currently in the tex space
+ * the inner HTML & template literal will update the '0' currently in the text space
+ * logs 0 if it's a tie
  */
 
  function incrementScore() {
@@ -219,19 +222,20 @@ function compare(playerChoice, computerChoice){
     document.getElementById("player_score").innerHTML = `Your Score:<br>${playerScore}`;
     document.getElementById("computer_score").innerHTML = `Lizard's Score:<br>${computerScore}`;
     
-    checkScore();
+    bestOfThree();
 }
 
 /**
  * Checks the score and declares game over when threshold has been met.
  * Applies best of 3 logic
+ * updates the welcome text to reveal the winner once either the player or Lizard reaches a score of three
  */
- function checkScore () {
+ function bestOfThree () {
     if (playerScore === 3) {
-        document.getElementById("welcome").innerHTML = "Well done! <br> You have won! <br>";
+        document.getElementById("welcome").innerHTML = "Well done! <br> You beat the lizard! <br>";
        
     } else if (computerScore === 3) {
-        document.getElementById("welcome").innerHTML = "Game Over! <br> You have lost! <br>";
+        document.getElementById("welcome").innerHTML = "Hard luck. <br> The lizard destroyed you! <br>";
     }
 }
 
