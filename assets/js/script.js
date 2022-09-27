@@ -52,15 +52,16 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * Pay attention to the 'runGame'
  * playerChoice defined
  */
-
- document.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("DOMContentLoaded", function(){
+    let buttons = document.getElementById("controls");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");
                 runGame(playerChoice);
-            }
-        });
+            })
+        }
+    })
 
 /**
  * The main game function, which is a parameter used in the above playerChoice function.
