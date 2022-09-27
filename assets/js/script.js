@@ -1,13 +1,15 @@
 /**
  * Setting up singular functions with one main task-single responsibility principle.
  * As per 'Love Math', I sketch out a page in my Balsamiq wireframes outlining the singular JS
- * functions that I believed that I would need to have in my design
+ * functions that I believed that I would need to have in my design. This was informed by the tutorials, slack and the 
+ * scope video.
  */
 
 
 /**
- * Declare constants for DOM elements 
- * and possible choices
+ * Declaration of constants with global scope for DOM elements 
+ * and possible choices. Because these are global scope,
+ * will apply to the full page of Javascript
  */
 const buttons= document.getElementById("controls");
 const playerScore = document.getElementById("player-score");
@@ -20,16 +22,17 @@ const computerImage = document.getElementById("computer-image");
 
 /**Message prompted is different based on whether the player or the computer wins*/
 const messages = document.getElementById("messages");
+/**
+ * The different choices available to the user to select and, one of which, the computer will randomly 
+ * generate simultaneously:
+ */
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 
 /**
  * Ensures function does not start until the DOM has loaded
  * Add event listeners to all of the buttons
- * Using the addEventListener from 'Love Maths' as getElementByTagName allows us to iterate
- * through an array
  * 
- * Tailoring the pop-up messages to the button selected by user, based on data choice.
- * Setting the gametype based on the button selected by user
+ * Defining playerChoice by the option selected by the user
  */
 
  document.addEventListener("DOMContentLoaded", function() {
@@ -37,7 +40,8 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-                alert("You made your choice!");
+                let playerChoice = this.getAttribute("data-choice");
+                playGame(playerChoice);
             }
         });
     
