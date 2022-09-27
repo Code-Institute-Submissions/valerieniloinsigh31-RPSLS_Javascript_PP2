@@ -15,7 +15,14 @@ const buttons= document.getElementById("controls");
 const playerScore = document.getElementById("player-score");
 const computerScore = document.getElementById("computer-score");
 
-/**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected) */
+/**The player-image and computer-image in scope version of game change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected)
+ * For each of the images, what needs to be done is the image will update based on what playerChoice and computerChoices were
+ * selected. To do this, five images need to be saved to the images folder and code written so that the selection of a certain
+ * choice pronpts this image to appear as opposed to any of the others. 'Src...used for this.'. The user image is 'player-image'
+ * and the computer image is 'computer-image'...is the code written in JS or CSS for which image to prompt? Try writing this code
+ * in CSS using an 'if else' formular...prompting the different images based on the data choice in the case of both the
+ * playerChoice and computerChoice
+ */
 
 const playerImage = document.getElementById("player-image");
 const computerImage = document.getElementById("computer-image");
@@ -32,11 +39,13 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
  * Ensures function does not start until the DOM has loaded
  * Add event listeners to all of the buttons
  * 
- * Defining playerChoice by the option selected by the user
+ * Defining playerChoice by the option selected by the user-
+ * inspired by the scope video
+ * Pay attention to the 'playGame' parameter, where is this 
+ * defined
  */
 
  document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
@@ -46,20 +55,17 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]
         });
     
 /**
- * commented out code from scope video
- */
- //document.addEventListener("DOMContentLoaded", function() {
-
-    //for (let button of buttons) {
-        //button.addEventListener("click", function() {
-            //let playerChoice = this.getAttribute("data-choice");
-            //playGame(playerChoice);
-        //});}
-
-/**
- * The main game function. Accepts one parameter, which
+ * The main game function, which is a parameter used in the above playerChoice function.
+ * . Accepts one parameter, which
+ * in the button function
  * is the data-choice value of the selected button
  * ties the images in with the choices
+ * look at the naming of the code, choices[playerChoice], how do we define this
+ * alt automatically updates
+ * image naming needs to match this format choices[playerChoice]= per the 'const choices array'= "rock", "paper", 
+ * "scissors", "lizard", "spock"
+ * the idea here is the '$choices[playerChoice]' will change based on what player chose and then match filepath, e.g.
+ * rock, paper, scissors, lizard or spock
  */
 function playGame(playerChoice) {
 
@@ -67,8 +73,8 @@ function playGame(playerChoice) {
     playerImage.alt= choices[playerchoice];
 }
 /**
- * How do I link the computerChoice in with an array? do I use parseint to make the strings numbers? How do I
- * tie the rnadomly generated number in with the choice array?
+ * Defining the computer choice to be randomly generated-5 choices to choose form in the array
+ * similar altering the image for computer to match the choice
  */
 let computerChoice= Math.floor(Math.random()*5);
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;
@@ -80,6 +86,8 @@ let computerChoice= Math.floor(Math.random()*5);
 /**
  * Checks to see who the winners are
  * define playerWinner and computerWinner
+ * how do we write this compare function
+ * how we display the parameters
  */
 
 let playerWinner=
@@ -90,16 +98,15 @@ let computerWinner=
  * Message Pop-Ups. Need to define 'playerWinner' to follow along with the rules of the game. There are a number of
  * situations in which the player could beat the computer. List all these. Use 'else if' then and all other situations
  * will prompt the second alert about the Lizard winning
+ * The below 'if else' formula will dictate what message appears and whether the incrementScore function is triggered or
+ * the incrementWrongChoice function is triggered
  */
  if(playerWinner) {
     alert("Hey! You beat the Lizard Queen who lives in your DOM! :D");
     incrementScore();
 } else {
     alert (`Awww...you answered ${userAnswer}. The Lizard Queen of the Dom beat you this time!`);
-    incrementWrongAnswer();
-}
-
-runGame(calculatedAnswer[1]);
+    incrementWrongChoice();
 }
 
 /**
@@ -136,39 +143,46 @@ runGame(calculatedAnswer[1]);
 /**
  * Empty functions that I think I need
  */
- //runGame();
- //displayUserAnswer();-turn selection into corresponding image saved in images folder
- //displayLizardAnswer();-generate random selection from computer and turn into correspdoning image saved in images folder
- //compareAnswers();
- //incrementScore(); (if user wins)
- //incrementWrongChoice(); (if lizard wins)
- //bestofThree-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
+ //1. runGame();
+ //2. displayUserAnswer();-turn selection into corresponding image saved in images folder
+ //3. displayLizardAnswer();-generate random selection from computer and turn into correspdoning image saved in images folder
+ //4. compareAnswers();
+ //5. incrementScore(); (if user wins)
+ //6. incrementWrongChoice(); (if lizard wins)
+ //7. bestofThree-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
  
+ //1.
 function runGame () {
 let playerChoice=clickedButton;
 let computerChoice=Math.floor(Math.random()*5);
 };
 
+//2.
 function displayUserAnswer () {
 
 }
 
+//3.
 function displayLizardAnswer () {
 
 }
 
+//4.
 function compareAnswers () {
 
 }
 
+//5.
 function incrementScore () {
 
 }
 
+//6.
 function incrementWrongChoice () {
 
 }
 
+/7.
 function bestOfThree () {
 
 }
