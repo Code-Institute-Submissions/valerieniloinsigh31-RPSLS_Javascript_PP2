@@ -73,8 +73,8 @@ function playGame(playerChoice) {
     playerImage.alt= choices[playerchoice];
 }
 /**
- * Defining the computer choice to be randomly generated-5 choices to choose form in the array
- * similar altering the image for computer to match the choice
+ * Defining the computer choice to be randomly generated-5 choices to choose form in the array (0,1,2,3,4)
+ * Additionally, as per player choice, the correct corresponding inage should be triggered once selection is made
  */
 let computerChoice= Math.floor(Math.random()*5);
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;
@@ -88,7 +88,17 @@ let computerChoice= Math.floor(Math.random()*5);
  * define playerWinner and computerWinner
  * how do we write this compare function
  * how we display the parameters
+ * 
+ * This is a very important compare function that dictates who is defined as the winne from the player/computer
+ * based on selected user chocie versus randomyl generated computer choice
+ * can an 'if else' be used to define logic in both of these cases?
+ * probably only need to define one...playerWinner
+ * also need to define checkWinner function
  */
+
+function checkWinner () {
+
+}
 
 let playerWinner=
 
@@ -146,7 +156,7 @@ let computerWinner=
  //1. runGame();
  //2. displayUserAnswer();-turn selection into corresponding image saved in images folder
  //3. displayLizardAnswer();-generate random selection from computer and turn into correspdoning image saved in images folder
- //4. compareAnswers();
+ //4. checkWinner();= a compare function
  //5. incrementScore(); (if user wins)
  //6. incrementWrongChoice(); (if lizard wins)
  //7. bestofThree-put a limit or cap/ceiling of three wins per player so a definite winner can be chosen and then it resets
