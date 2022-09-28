@@ -1,5 +1,5 @@
 /* -- Real PP2 Javascript Rock, Paper, Scissors, Lizard, Spock Project */
-/*Main view set-up*/
+/*Basics*/
 html {
     min-height:100%;
     position:relative;
@@ -30,7 +30,7 @@ body{
     font-size:small;
  }
 
- /*Game area, control section and welcome section-all responsive*/
+ /*Game area, control section and welcome section*/
 
 .game-area {
     width:75%;
@@ -66,21 +66,22 @@ color:black;
     float:left;
     width:30vw;
 }
-/*player image-default set to opaque image of Spock-consider the image changing once option is selected*/
+/*player image*/
 #player-image {
     width:15vw;
+    height:25vh;
     margin-bottom:40%;
-    opacity:100%;
 }
-/*container for the computer 'Lizard' player*/
+/*container for the computer 'System' player*/
 .computer {
     background-color: lightblue;
     float:right;
     width:30vw;
 }
-/*computer/Lizard's image-default set to Spock*/
+/*computer/'System's' image*/
 #computer-image {
     width:15vw;
+    height:25vh;
     margin-bottom:40%;
 }
 
