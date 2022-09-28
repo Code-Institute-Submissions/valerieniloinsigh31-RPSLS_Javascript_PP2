@@ -130,7 +130,7 @@ color:black;
 .btn {
     width: 220px;
     height: 60px;
-    font-family: "Raleway", sans-serif;
+    font-family: "Bungee Spice", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: white;
@@ -149,7 +149,7 @@ color:black;
     height: 100px;
     font-size: 3.2rem;
     margin: 0 30px;
-    transition: all 0.5s;
+    transition: all 1s;
 }
 
 /* --- new pseudo-element - to insert content after an element. This will be used to insert the content of our
@@ -236,12 +236,13 @@ color:black;
     background-color: greenyellow;
 }
 
+
+#reset_button {
+    font-size: medium;
+}
 /* --------- Media queries-only two listed here 414px versus 320px, do we need more */
 
 @media (max-width: 414px) {
-    .controls-area {
-        width: 100%;
-    }
 
     .btn--big {
         margin: 0 10px;
@@ -279,11 +280,6 @@ color:black;
 @media (max-width: 320px) {
     .game-area {
         height: 70vh;
-    }
-
-    .controls-area {
-        width: 75%;
-        margin: 10px auto;
     }
 
     .btn--big {

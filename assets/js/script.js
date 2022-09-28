@@ -175,12 +175,20 @@ function compare(playerChoice,computerChoice){
  */
  function bestOfThree () {
     if (playerScore === 3) {
-        document.getElementById("messages").innerHTML = "Well done! You beat the system man! Click the power button to play again";//when player score reaches 3, this message prompted
-        document.getElementsByClass("controls").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("messages").innerHTML = "Well done! You beat the system man! Click the reset button to play again";//when player score reaches 3, this message prompted
+        document.getElementById("rock").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("paper").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("scissors").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("lizard").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("spock").disabled = true; //Disables control buttons after game ends.
        
     } else if (computerScore === 3) {
-        document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you! Click the power button to play again";//when computer score reaches 3, this message prompted
-        document.getElementsByClass("controls").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you! Click the reset button to play again";//when computer score reaches 3, this message prompted
+        document.getElementById("rock").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("paper").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("scissors").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("lizard").disabled = true; //Disables control buttons after game ends.
+        document.getElementById("spock").disabled = true; //Disables control buttons after game ends.
     }
 }
 

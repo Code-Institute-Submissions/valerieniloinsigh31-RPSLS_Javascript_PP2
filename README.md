@@ -3,63 +3,74 @@
 
 
 <h2><b>Minimum Viable Product-Logic</b></h2>
-Due to timeline for submissions and my working full-time during the week, I decided to focus on completing one of the outlined tasks to the highest possible quality level as opposed to overcomplicating an original design that I would not have time to execute properly. I planned on completing the Javascript modules in a comprehensive fashion, giving myself time to absorb the logic and to develop a proper understanding prior to starting the project. Accordingly, I took my time going through the videos.
+Due to the timeline for submissions and my working full-time during the week, I decided to focus on completing one of the outlined tasks to the highest possible quality level as opposed to overcomplicating an original design that I would not have time to execute properly. I planned on completing the Javascript modules in a comprehensive fashion, giving myself time to absorb the logic and to develop a proper understanding prior to starting the project. Accordingly, I took my time going through the videos.
   I decided on the 'Rock, Paper, Scissors, Lizard, Spock' project as I was familiar with the game and appreciated the demo video provided by CI.
 I planned on having shorter simpler HTML and CSS pages so that I could truly focus on ensuring the Javascript code was adequate.
 
 
 <h1>Design</h1>
 
-<b>Explanation of the purpose of the game:</b> An interactive game of 'Rock, Paper, Scissors,Lizard, Spock' that enables users to play the well-known game against the computer without being able to easily predict an outcome. The game is the best of three and then resets. 
-<b>Value that the game provides to its users:</b> An entertaining and engaging game that is sponstaneous in it's selection. It is an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissors, Lizard, Spock', as it is the user versus computer essentially.
-<b>Description of the deployment procedure:</b> As usual, I created my project on the GITHUB platform, as supported by CI. Once the project was fully complete, fully tested and formatted properly, I followed the usual steps to deploy the project. Please see the description of the steps as well as screenshots below:
+<b>Explanation of the purpose of the game:</b> An interactive game of 'Rock, Paper, Scissors,Lizard, Spock' that enables users to play the well-known game against the computer without being able to easily predict an outcome. My version of the game keeps a tally of the score and the winner is decided by best of three rounds and then the game becomes disabled and the reset button must be clicked to play again. 
+<b>Value that the game provides to its users:</b> An entertaining and engaging game that is sponstaneous in it's selection. It offers an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissors, Lizard, Spock', as it is the user versus the computer essentially, which generates its answers at random.
+<b>Description of the deployment procedure:</b> As usual, I created my project on the GITHUB platform, as supported by CI. Once the project was fully complete, fully tested and formatted properly, I followed the usual steps to deploy the project. Please see the description of the deployment steps as well as screenshots below:
 
 
-<em>Choosing the Javascript functions</em> As advised on the tutorials, I focussed on setting up singular functions with one main task which is called the 'single responsibility principle'. This involves having one key, defined purpose per function as opposed to overcomplicating things.
-
+<em>Choosing the Javascript functions</em> As advised on the tutorials, I focussed on setting up singular functions with one main task which is called the 'single responsibility principle'. This involves having one key, defined purpose per function as opposed to overcomplicating things. I appreciated the importance of defining parameters and arguments for functions and how the functions inter-relate to one another.
 
 <b>Balsamiq wireframes</b>
-
 To give myself an overall idea of the project prior to inputting code, I completed a rough design on Balsamiq Wireframes, screengrab inserted below. 
-I allowed a page for HTML, CSS and Javascript and broke each into sections so that I would not forget an integral aspect of any of the pages or forget to include an important link. I separate page listinge the Javascript functions that i used in building the project, with a brief explanation of each provided.
+I allowed a page for HTML, CSS and Javascript and broke each into sections so that I would not forget an integral aspect of any of the pages or forget to include an important link. I included a separate page listing the Javascript functions that I would be using in building the project, with a brief explanation of each provided.
 
 <b>Learning from Project 1: Responsiveness</b>
 
 My weakest area in PP1 HTML&CSS was the responsiveness. I had tried to use flex-box and relative percentages but did not do this adequately as there were issues across various devices in the responsiveness. I decided to be very thorough with my media-queries and responsiveness testing on this project as a result. I reviewed the tutorials and scoured slack to assist me with this.
 
 <b>Testing:</b>
-As I was building my Javascript Code in particular, I constantly had a browser open and was inspecting the consold via developer tools and was amending errors as they occurred. I found this to be a very efficient way of refining the project as the developer tools points to the exact line of the error and offers a brief explanation.
-Mobile first design-testing the website for responsiveness on a number of different devices via developer tools. As per the grid below, I used developer tools to view the finished project on a number of different viewport and please see below how they reacted to respsonsiveness.
+-As I was building my Javascript Code in particular, I constantly had a browser open and was inspecting the console via developer tools and was amending errors as they occurred. I found this to be a very efficient way of refining the project as the developer tools points to the exact line of the error and offers a brief explanation.
+-Mobile first design-I ensured to do a thorough testing on the website for responsiveness on a number of different devices via developer tools. As per the grid below, I used developer tools to view the finished project on a number of different viewport and please see below how they reacted to responsiveness.
+
+Viewport:      Overflow:       Images clear?:
+
+
 Lighthouse: All high, passable. Particularly accessiblilty
+Screegrab of percentiles:
+
 W3C HTML:
-Ran HTML Code through the W3C validator and, as per below screengrab, no errors were found.
+
+I ran HTML Code through the W3C validator and, as per below screengrab, no errors were found.
 Screengrab:
 
 W3C CSS:
-Ran CSS Code through the W3C validator and, as per below screengrab, no errors were found.
+I ran CSS Code through the W3C validator and, as per below screengrab, no errors were found.
 Screegrab:
 
-JSHint (new testing method included in this module-specific to Javascript)
+JSHint 
+This was a new testing platform for Project 2, specific to testing Javascript
 I ran the Javascript Code through JSHint and discovered the following errors and warnings. Please see how I resolved/responded to the errors in each case below:
 
-<b>Manual testing & Responsiveness</b>
+<b>Manual testing</b>
 
-Developer Tools as well as manually checking on my real mobile and different laptops.
+Developer tools-open console, check for errors
+Try different buttons
+What was supposed to happen versus what did happen.
 
-What different viewports/devices were tested and what was observed
 
 <b>Design:</b>
 
-<em>Color scheme</em>: Fast-paced game and would require intense staring at the screen. Did not want something too bright or strong as that may have caused eye soreness or the glare from the screen may have negated from the game. Went for '', a strong colour but also easy on the eye that would compliment the intensive staring required of the game.
+<em>Color scheme</em>: As I knew that this was a fast-paced game that would require intense staring at the screen, I did not want to use a color that was too bright or strong as that may have caused eye soreness or the glare from the screen may have negated from the game. Went for '', a strong colour but also easy on the eye that would compliment the intensive staring required of the game.
 <em>Font:</em> I did thorough research on Google Fonts before I decided on the 'Bungee Spice' font. I wanted something fun, inkeeping with the theme of the game but also legible and clear.
-<em> Favicons:</em> I inserted the favicon link in the head of the HTML page to enable functionality. This is a fun new feature to this.
+<em> Favicons:</em> I inserted the favicon link in the head of the HTML page to enable functionality. This is a fun new feature that I had not included in previous projects.
 <em>Animation</em> I enabeled Animate CSS via HTML and inserted an eye catching animation on the title. This created the fun, games vibe that I desired.
-<em>Interactivity:</em> The five buttons present the user with the option to select. The computer simultaenously responds with their answer. The answers are compared and the game decides on the winner, considering the rules of the game. The score is incremented accordingly. Also the text-area updates to disclose who has won the round. The game is best of three so the overall winner is decided by who wins three rounds. Then the game resets.
-<em>Accessibility:</em> I ensured to include ALTs and aria-labels where possible to assist screen readers. Not reliant on audio queues to be accessible to deaf users. Nothing automatically plays without the user initiating it.
+<em>Interactivity:</em> The five buttons present the user with the option to select. The computer simultaenously responds with their choice, which is generated at random. The answers are compared and the game decides on the winner, considering the rules of the game which were input to Javascript via an 'If Else' formula. The score is incremented accordingly and each game is decided by the best of three rounds. Messages are prompted to disclose who has won the round. The game is best of three so the overall winner is decided by who wins three rounds. Then the game control buttons are disabled and the user must click on the reset button to begin the game again.
+<em>Accessibility:</em> I ensured to include ALTs and aria-labels where possible to assist screen readers. Not reliant on audio queues to be accessible to deaf users. Nothing automatically plays without the user initiating it. Also, I inserted types to the buttons.
 
-<h2>User Experience- The Five Planes</h2>
+<h2>User Experience</h2>
 
 User Stories:
+<ol>
+<li>The user wants a game that is easy to understand. Yes, rules laid out clearly and all they need to do is click a button.</li>
+<li> The user wants a game that offers interaction. Yes, the computer spontaneously generates there own answer which supplies the user with a competitor. Also, the photos are updated based on the users data choice, the scores are updated based on who won each round and for each round and game, a message is prompted saying who won or lost.</li>
+<li>The user wants a game that they can play in between things during the day/whilst waiting/that does not require continued concentration. Yes, the games are short with the best-of-three ounds deciding the winner. No background knowledge is required and the user can stop/start agin whenever they want with the reset button.
 
 
 <h2>Overview of the Project</h2>
@@ -105,10 +116,9 @@ Best-of-three feature: Once player/Lizard reaches a score of three, the game is 
 -As opposed to just text being prompted on each game, a little gif or video could play depending on whether the user has
 lost or won the game. (E.g. a gif of somebody falling if the loser has lost the game)
 -Timer appears: To introduce an element of urgency, I would insert a countdown timer that allows the user 15 seconds to choose their button on each round or else the game resets.
--Loaders
 
 <b>Testing</b>
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your project’s features and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+I have conducted enough testing to legitimately believe that the site works well. All of my project’s features work as intended, and the game is easy for the user to understand and play.
 
 Developers Tools (viewport testing): In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
@@ -150,6 +160,12 @@ I was panicking initially when thnking of how to design my Javascript functions 
 The google font was taken from ''
 The icons in the footer were taken from Font Awesome
 I drew inspiration from the tutorials provided by the Code Institute, the walkthrough demonstration of building the 'Love Math' project, the scoping video for PP2 created by CI and then reveiwed a number of different student queried on the 'PP2' on the Slack Platform and the code used by those students to inform my own coding.
+
+The work of other students that I found inspiring: 
+Clinelly
+Benjibenne
+Love Math Walkthrough Project
+PP2 Scope video
 
 <b>Media</b>
 The photos used are from the following sources: Pexel, 

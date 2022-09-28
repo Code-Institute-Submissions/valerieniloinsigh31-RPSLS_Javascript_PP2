@@ -33,15 +33,15 @@ body {
             <div class="Title"><h2 class="animate__animated animate__rubberBand animate__slow">Pick your poison!</h2></div>
             <p id = "welcome">Welcome!<br>Press a button to see if you can beat the system. Rules at the bottom.</p>
             <!--Game buttons-->
-            <button data-choice="0" class="controls btn btn--big btn--blue" aria-label="Rock">
+            <button id="rock" data-choice="0" class="controls btn btn--big btn--blue" aria-label="Rock">
             <i class="fa-regular fa-hand-back-fist"></i></button>
-            <button data-choice="1" class="controls btn btn--big btn--orange" aria-label="Paper">
+            <button id="paper" data-choice="1" class="controls btn btn--big btn--orange" aria-label="Paper">
             <i class="fa-regular fa-hand"></i></button>
-            <button data-choice="2" class="controls btn btn--big btn--red" aria-label="Scissors">
+            <button id="scissors" data-choice="2" class="controls btn btn--big btn--red" aria-label="Scissors">
             <i class="fa-regular fa-hand-scissors"></i></button>
-            <button data-choice="3" class="controls btn btn--big btn--green" aria-label="Lizard">
+            <button id="lizard" data-choice="3" class="controls btn btn--big btn--green" aria-label="Lizard">
             <i class="fa-solid fa-hand-lizard"></i></button>
-            <button  data-choice="4" class="controls btn btn--big btn--gray" aria-label="Spock">
+            <button id="spock" data-choice="4" class="controls btn btn--big btn--gray" aria-label="Spock">
             <i class="fa-solid fa-hand-spock"></i></button>
             </div>
             <!--Messages section-->
@@ -61,7 +61,7 @@ body {
             </section>
             <hr>
             <!--Reset button-->
-            <div id="reset_button">
+            <div id="reset_button"> Reset
             <button  id="reset" class="reset btn btn--big btn--reset" aria-label="Reset button">
                 <i class="fa-solid fa-power-off"></i></button>
             </div>
