@@ -4,11 +4,11 @@
  * the will apply to the full page of Javascript
  */
 
-const playerScore = document.getElementById("player_score");//variable used in scoring system at end
-const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
+//const playerScore = document.getElementById("player_score");//variable used in scoring system at end
+//const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
 
-//playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
-//computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
+playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
+computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
 
 const playerImage = document.getElementById("player-image");
 //this will change based on playerChoice so filepaths need to be 
@@ -126,7 +126,7 @@ function compare(playerChoice,computerChoice){
             answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper bamboozled Spock. You lose this time!`
        }
    }
-   result (answer);
+   result(answer);
 }
 
 /**
@@ -158,7 +158,7 @@ function compare(playerChoice,computerChoice){
  function incrementScore() {
 
     if (answer.includes(`win`)){
-        playerScore++;//increases player score in increments of 1 if sentence includes 'win'
+        console.log(playerScore++); //increases player score in increments of 1 if sentence includes 'win'
     } else if (answer.includes(`lose`)){
         computerScore++;//increases computer score in increments of 1 if sentence includes 'lose'
     } else {
@@ -167,7 +167,7 @@ function compare(playerChoice,computerChoice){
     document.getElementById("player_score").innerHTML = `${playerScore}`;//updates the number of playerScore
     document.getElementById("computer_score").innerHTML = `${computerScore}`;//updates the number of computerScore
     
-    bestOfThree();//triggers bestofThree function
+    //bestOfThree();//triggers bestofThree function
 }
 
 /**
@@ -184,8 +184,17 @@ function compare(playerChoice,computerChoice){
         document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you!";//when computer score reachers
         //three, this message appears in the messages section
     }
+
+    reset();
 }
 
 /**
- * Reset game once bestOfThree has occurred
+ * Reset function that resets game once bestOfThree has occurred
  */
+
+function reset (bestOfThree) {
+     document.getElementById(player_score).innerHTML = `0`;
+     document.getElementById(computer_score).innerHTML = `0`;
+     document.getElementById(messages).innerHTML = `Play Again?`;
+     console.log(messages)
+}
