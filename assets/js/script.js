@@ -1,14 +1,7 @@
 /**
- * Setting up singular functions with one main task-single responsibility principle.
- * As per 'Love Math', I sketch out a page in my Balsamiq wireframes outlining the singular JS
- * functions that I believed that I would need to have in my design. This was informed by the tutorials, slack and the 
- * scope video.
- */
-
-/**
  * Declaration of constants with global scope for DOM elements 
  * and possible choices. Because these are global scope,
- * will apply to the full page of Javascript
+ * the will apply to the full page of Javascript
  */
 
 const playerScoreDom = document.getElementById("player_score");//variable used in scoring system at end

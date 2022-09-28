@@ -15,6 +15,9 @@ I planned on having shorter simpler HTML and CSS pages so that I could truly foc
 <b>Description of the deployment procedure:</b> As usual, I created my project on the GITHUB platform, as supported by CI. Once the project was fully complete, fully tested and formatted properly, I followed the usual steps to deploy the project. Please see the description of the steps as well as screenshots below:
 
 
+<em>Choosing the Javascript functions</em> As advised on the tutorials, I focussed on setting up singular functions with one main task which is called the 'single responsibility principle'. This involves having one key, defined purpose per function as opposed to overcomplicating things.
+
+
 <b>Balsamiq wireframes</b>
 
 To give myself an overall idea of the project prior to inputting code, I completed a rough design on Balsamiq Wireframes, screengrab inserted below. 
@@ -88,11 +91,14 @@ Rules are clearly distinguished at the bottom of the page.
 <em>Javascript:</em>
 The focus of this project. Interactive, spontaneous, well-thought through.
 Functions:
-Buttons
-Score board
-Prompted responses
-Best-of-three feature:
+Image changing based on the button choice: The player-image and computer-image, in the PP2 scope video on the CI LMS version of game, change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected).
+I appreciated this function and applied it to my project also.
+ The basic premise being that for each of the two images in the 'score_area'(one for the player score section and one for the computer/lizard score section), the image will update based on what playerChoice and computerChoices were made. To do this, using the src filepath to the assets folder and template literals, each of the five images (rock, paper, scissors, lizard, spock) needed to be saved to the images folder with the name in a certain format (rock.png., scissors.png etc.) and the code written in template literal placeholder format that will target specific images based on button choice so that the selection of a certain choice prompts the relevant image to appear as opposed to any of the others. 'Src...used for this.'. The user image is 'player-image' and the Lizard image is 'computer-image'
 
+Buttons- design is based on the 'Love Math' walkthrough game project. Added an eventListener that activates the user choice once clicked on by user and triggers the other functions (prompts text to change, prompts computer to randomly generate their choice, prompts compare function, prompts score board etc.)
+Score board- Compare function used, winner chosen based on code written to suit the rules of the game. This is done using a long 'if else' formula. Score updates in increments of one based on winner chosen.
+Prompted responses
+Best-of-three feature: Once player/Lizard reaches a score of three, the game is over and a winner is selected. This autamtically resets the scorebaord.
 
 
 <h3>Features left to implement</h3>
