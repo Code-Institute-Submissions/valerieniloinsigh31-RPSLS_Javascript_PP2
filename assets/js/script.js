@@ -4,11 +4,11 @@
  * the will apply to the full page of Javascript
  */
 
-const playerScoreDom = document.getElementById("player_score");//variable used in scoring system at end
-const computerScoreDom = document.getElementById("computer_score");//variable used in scoring system at end
+const playerScore = document.getElementById("player_score");//variable used in scoring system at end
+const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
 
-playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
-computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
+//playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
+//computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
 
 const playerImage = document.getElementById("player-image");
 //this will change based on playerChoice so filepaths need to be 
@@ -20,11 +20,12 @@ const computerImage = document.getElementById("computer-image");
 /**Message prompted is different based on whether the player or the computer wins-maybe use just one message once best of three 
  * function applied
 */
-const messages = document.getElementById("messages");//not used yet. section for text to be updated
+const messages = document.getElementById("messages");//Helpful pop-up messages that aids user understanding
 const buttons = document.getElementsByClassName("controls");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]//an array of the different choices that the user can select
 //and that the computer/Lizard will simulataneously generate autoamtically
-const computerChoice = choices[Math.floor(Math.random()*5)];//should generate random number within index 0-4
+const computerChoice = [Math.floor(Math.random()*5)];//should generate random number between 0-4 that can be used as an
+//index for choices array
 
 /**
  * Ensures function does not start until the DOM has loaded
@@ -35,11 +36,10 @@ const computerChoice = choices[Math.floor(Math.random()*5)];//should generate ra
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");//defines playerChoice by button clicked by user
-                runGame(playerChoice);
+                runGame(playerChoice, computerChoice);//computerChoice should run simultaneously and also be prompted
             })
         }
     })
-
 /**
  * The main game function, which is used in the above function.
  * playerChoice defined in above function used as a parameter in the runGame function
@@ -58,9 +58,10 @@ function runGame(playerChoice, computerChoice) {
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;//computerChoice defined at top-based on index of 
     //choices array. computerChoice generates random number between 0-4 which selects an index option fro choices array
     //template literals used to trigger image to update based on filepath name alignign with computerChoice
+    console.log(`assets/images/${choices[computerChoice]}.png`);
     computerImage.alt= choices[computerChoice];//alt automatically updates too
 
-    let result= compare(choices[computerChoice], choices[playerChoice]);//result declared here, compares choices
+    let result= compare(choices[playerChoice], choices[computerChoice]);//result declared here, compares choices
 }
 
 /**
@@ -71,56 +72,56 @@ function runGame(playerChoice, computerChoice) {
 
 function compare(playerChoice, computerChoice){
    if (choices[playerChoice] === choices[computerChoice]) {
-       answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>You are tied!`
+       answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>You are tied!`
    } else if (choices[playerChoice] === "rock") {
        if (choices[computerChoice] === "paper"){
-           answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br> Paper beats Rock. You lose this time!`
+           answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br> Paper beats Rock. You lose this time!`
        } else if (choices[computerChoice] === "scissors"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Scissors. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock crushes Scissors. You win this time!`
        } else if (choices[computerChoice] === "lizard"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Lizard. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock vaporizes Lizard. You win this time!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Rock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock knocks Rock out. You lose this time!`
        }
    } else if (choices[playerChoice] === "paper") {
        if (choices[computerChoice] === "scissors"){
-         answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Scissors beats Paper. You lose this time!`
+         answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors conquers Paper. You lose this time!`
        } else if (choices[computerChoice] === "lizard"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Lizard beats Paper. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard bowls over Paper. You lose this time!`
        } else if (choices[computerChoice] === "spock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Spock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper trashes Spock. You win this time!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Rock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper annihilates Rock. You win this time!`
        }
    } else if (choices[playerChoice] === "scissors") {
        if (choices[computerChoice] === "rock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lose this time!`
        } else if (choices[computerChoice] === "paper"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Scissors beats Paper. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors beats Paper. You win this time!`
        } else if (choices[computerChoice] === "lizard"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Scissors beats Lizard. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors beats Lizard. You win this time!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock beats Scissors. You lose this time!`
        }
    } else if (choices[playerChoice] === "lizard") {
        if (choices[computerChoice] === "rock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock trumps Scissors. You lose this time!`
        } else if (choices[computerChoice] === "paper"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Lizard beats Paper. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard annihilates Paper. You win this time!`
        } else if (choices[computerChoice] === "spock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Lizard beats Spock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard sends Spock packing. You win this time!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Rock beats Lizard. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock shows the Lizard what's up. You lose this time!`
        }
    }  else if (choices[playerChoice] === "spock") {
        if (choices[computerChoice] === "rock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Rock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock trashes Rock. You win this time!`
        } else if (choices[computerChoice] === "paper"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Spock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper whoops Spock. You lose this time!`
        } else if (choices[computerChoice] === "scissors"){
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Spock beats Scissors. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock claps back Scissors. You win this time!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The Lizard chose: ${choices[computerChoice]}<br>Paper beats Spock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper bamboozled Spock. You lose this time!`
        }
    }
    result (answer);
@@ -131,7 +132,7 @@ function compare(playerChoice, computerChoice){
  * It also triggers the incrementScore function
  */
  function result(answer){
-    let gameEnd = document.getElementById("welcome");
+    let gameEnd = document.getElementById("messages");
     gameEnd.innerHTML = answer.toUpperCase();
 
     incrementScore();
@@ -155,16 +156,16 @@ function compare(playerChoice, computerChoice){
  function incrementScore() {
 
     if (answer.includes(`win`)){
-        playerScore++;
+        playerScore++;//increases player score in increments of 1 if sentence includes 'win'
     } else if (answer.includes(`lose`)){
-        computerScore++;
+        computerScore++;//increases computer score in increments of 1 if sentence includes 'lose'
     } else {
-        console.log('0')
+        console.log('0')//nothing updated if it's a tie (no win/lose)
     }
-    document.getElementById("player_score").innerHTML = `Your Score:<br>${playerScore}`;
-    document.getElementById("computer_score").innerHTML = `Lizard's Score:<br>${computerScore}`;
+    document.getElementById("player_score").innerHTML = `${playerScore}`;//updates the number of playerScore
+    document.getElementById("computer_score").innerHTML = `${computerScore}`;//updates the number of computerScore
     
-    bestOfThree();
+    bestOfThree();//triggers bestofThree function
 }
 
 /**
@@ -174,9 +175,11 @@ function compare(playerChoice, computerChoice){
  */
  function bestOfThree () {
     if (playerScore === 3) {
-        document.getElementById("messages").innerHTML = "Well done! <br> You beat the lizard! <br>";
+        document.getElementById("messages").innerHTML = "Well done! You beat the system man!";//when player score reaches
+        //three, this message appears in the messages section
        
     } else if (computerScore === 3) {
-        document.getElementById("messages").innerHTML = "Hard luck. <br> The lizard destroyed you! <br>";
+        document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you!";//when computer score reachers
+        //three, this message appears in the messages section
     }
 }

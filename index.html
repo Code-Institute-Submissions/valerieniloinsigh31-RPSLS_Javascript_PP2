@@ -31,7 +31,7 @@ body {
     <div class="game-area">
         <div class="controls-area">
             <div class="Title"><h2 class="animate__animated animate__rubberBand animate__slow">Pick your poison!</h2></div>
-            <p id = "welcome">Welcome!<br>Press a button to see can you beat the Lizard. Rules at bottom.</p>
+            <p id = "welcome">Welcome!<br>Press a button to see if you can beat the system. Rules at the bottom.</p>
             <!--Game buttons-->
             <button data-choice="0" class="controls btn btn--big btn--blue" aria-label="Rock">
             <i class="fa-regular fa-hand-back-fist"></i></button>
@@ -45,16 +45,18 @@ body {
             <i class="fa-solid fa-hand-spock"></i></button>
             </div>
             <!--Messages section-->
+            <hr>
             <div id="messages">Come play!</div>
+            <hr>
             <!--Scoring section-->
             <section class="score_area">
             <div class="player">
-            <h3 class="scores"> <i class="fa-regular fa-thumbs-up"></i> Your score: <span id="player_score">0</span></h3>
+            <h3 class="scores"> <i class="fa-regular fa-thumbs-up"></i>Your score:<span id="player_score">0</span></h3>
             <img id="player-image" src="assets/images/spock.png" alt="A cartoon spock displaying famous hand gesture"> 
             </div>
             <div class="computer">
-            <h3 class="scores"> <i class="fa-regular fa-thumbs-down"></i> Lizard's score: <span id="computer_score">0</span></h3>
-            <img id="computer-image" src="assets/images/spock.png" alt="A cartoon spock displaying famous hand gesture">
+            <h3 class="scores"> <i class="fa-regular fa-thumbs-down"></i>System score:<span id="computer_score">0</span></h3>
+            <img id="computer-image" src="assets/images/spock.png" alt="A cartoon spock displaying famous hand gesture-not fully opaque">
             </div>
             </section>
             <hr>
@@ -62,11 +64,11 @@ body {
             <footer class="footer">
                 <p>Rules of the game:</p>
                 <ol>
-                    <li>Rock destroys scissors and lizard <i class="fa-regular fa-hand-back-fist"></i></li>
-                    <li>Paper destroys rock and spock <i class="fa-regular fa-hand"></i></li>
-                    <li>Scissors destroys paper and lizard <i class="fa-regular fa-hand-scissors"></i></li>
-                    <li>Lizard destroys paper and spock<i class="fa-solid fa-hand-lizard"></i></li>
-                    <li>Spock destroys rock and scissors<i class="fa-solid fa-hand-spock"></i></li>
+                    <li>Rock destroys scissors and lizard! <i class="fa-regular fa-hand-back-fist"></i></li>
+                    <li>Paper annihilates rock and spock!! <i class="fa-regular fa-hand"></i></li>
+                    <li>Scissors obliterates paper and lizard!!! <i class="fa-regular fa-hand-scissors"></i></li>
+                    <li>Lizard conquers paper and spock!!!!<i class="fa-solid fa-hand-lizard"></i></li>
+                    <li>Spock makes mince meat of rock and scissors!!!!!<i class="fa-solid fa-hand-spock"></i></li>
                 </ol>
             </footer>
             <!--Javascript link-->

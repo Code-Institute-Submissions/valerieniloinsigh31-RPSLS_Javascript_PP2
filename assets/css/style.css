@@ -52,16 +52,19 @@ font-size:medium;
 color:black;
 }
 
-/*Pop up win/lost messages that aid the user's understanding*/
+/*Pop up messages that aid the user's understanding*/
 #messages {
-    height:20px;
+    height:10rem;
+    border: #445361;
+    margin: auto;
+    font-size:80%;
 }
 
 /*container for the player section*/
 .player {
     background-color: lightblue;
     float:left;
-    width:45%;
+    width:30vw;
 }
 /*player image-default set to opaque image of Spock-consider the image changing once option is selected*/
 #player-image {
@@ -73,7 +76,7 @@ color:black;
 .computer {
     background-color: lightblue;
     float:right;
-    width:45%;
+    width:30vw;
 }
 /*computer/Lizard's image-default set to transparent version of Spock*/
 #computer-image {
@@ -101,7 +104,7 @@ color:black;
 }
 /*Scores*/
 #player_score {
-    color: green;
+    color: red;
     font-weight: bold;
 }
 
@@ -124,7 +127,7 @@ color:black;
 
 .logo {
     height: 10vh;
-    padding-right: 5px;
+    padding-right: 5%;
 }
 
 /* --------- Buttons-alter design aspects to tailor */
