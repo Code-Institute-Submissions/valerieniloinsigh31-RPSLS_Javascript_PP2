@@ -10,12 +10,13 @@ body{
     background-color:aqua;
 }
 
-/*Header and footer*/
+/*Header and rules*/
  header{
     text-align:center;
     height:100px;
  }
- footer{
+
+.rules{
     position:absolute;
     width:100%;
     left:0;

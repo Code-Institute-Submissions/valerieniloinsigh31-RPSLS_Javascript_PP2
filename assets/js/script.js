@@ -158,7 +158,7 @@ function compare(playerChoice,computerChoice){
  function incrementScore() {
 
     if (answer.includes(`win`)){
-        console.log(playerScore++); //increases player score in increments of 1 if sentence includes 'win'
+        playerScore++; //increases player score in increments of 1 if sentence includes 'win'
     } else if (answer.includes(`lose`)){
         computerScore++;//increases computer score in increments of 1 if sentence includes 'lose'
     } else {
@@ -167,7 +167,7 @@ function compare(playerChoice,computerChoice){
     document.getElementById("player_score").innerHTML = `${playerScore}`;//updates the number of playerScore
     document.getElementById("computer_score").innerHTML = `${computerScore}`;//updates the number of computerScore
     
-    //bestOfThree();//triggers bestofThree function
+    bestOfThree();//triggers bestofThree function
 }
 
 /**
@@ -184,17 +184,15 @@ function compare(playerChoice,computerChoice){
         document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you!";//when computer score reachers
         //three, this message appears in the messages section
     }
-
-    reset();
 }
 
 /**
  * Reset function that resets game once bestOfThree has occurred
  */
 
-function reset (bestOfThree) {
-     document.getElementById(player_score).innerHTML = `0`;
-     document.getElementById(computer_score).innerHTML = `0`;
-     document.getElementById(messages).innerHTML = `Play Again?`;
-     console.log(messages)
-}
+//function reset (bestOfThree) {
+     //document.getElementById(player_score).innerHTML = `0`;
+     //document.getElementById(computer_score).innerHTML = `0`;
+     //document.getElementById(messages).innerHTML = `Play Again?`;
+     //console.log(messages)
+//I }
