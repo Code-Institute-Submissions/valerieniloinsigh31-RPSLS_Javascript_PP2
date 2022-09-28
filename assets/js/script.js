@@ -21,7 +21,7 @@ const computerImage = document.getElementById("computer-image");
  * function applied
 */
 const messages = document.getElementById("messages");//not used yet. section for text to be updated
-const button = document.getElementByClassName("controls");
+const buttons = document.getElementsByClassName("controls");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]//an array of the different choices that the user can select
 //and that the computer/Lizard will simulataneously generate autoamtically
 const computerChoice = choices[Math.floor(Math.random()*5)];//should generate random number within index 0-4
@@ -31,7 +31,7 @@ const computerChoice = choices[Math.floor(Math.random()*5)];//should generate ra
  * Added click event listeners to all of the buttons
  */
  document.addEventListener("DOMContentLoaded", function(){
-   
+ 
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");//defines playerChoice by button clicked by user
@@ -41,20 +41,13 @@ const computerChoice = choices[Math.floor(Math.random()*5)];//should generate ra
     })
 
 /**
- * The main game function, which is a parameter used in the above playerChoice function.
- * Accepts one parameter, which
- * in the button function
- * is the data-choice value of the selected button
- * ties the images in with the choices
- * look at the naming of the code, choices[playerChoice], how do we define this
- * alt automatically updates
- * image naming needs to match this format choices[playerChoice]= per the 'const choices array'= "rock", "paper", 
- * "scissors", "lizard", "spock"
- * the idea here is the '$choices[playerChoice]' will change based on what player chose and then match filepath, e.g.
- * rock, paper, scissors, lizard or spock
- * filepath name updated based on playerChoice number to index number in choices array
+ * The main game function, which is used in the above function.
+ * playerChoice defined in above function used as a parameter in the runGame function
+ * The idea with the below is images are supposed to update to match the playerChoice and computerChoice
+ * do I need to redefine computerChoice here
+ * playerChoice and computerChoice used as parameters
  */
-function runGame(playerChoice) {
+function runGame(playerChoice, computerChoice) {
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;//playerChoice changes based on button selected by user
     //data-choice associated with button is number between 0-4 which is then applied as an index number to the choices array
