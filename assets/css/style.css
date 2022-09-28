@@ -52,12 +52,13 @@ font-size:medium;
 color:black;
 }
 
-/*Pop up messages that aid the user's understanding*/
+/*Pop up messages that aid the user's understanding. Applied overflow:scroll for responsivity*/
 #messages {
     height:10rem;
     border: #445361;
     margin: auto;
     font-size:5vh;
+    overflow:scroll;
 }
 
 /*container for the player section*/
@@ -246,7 +247,7 @@ overflow:hidden;
 }
 
 
-/* --------- Media queries-only two listed here 414px versus 320px, do we need more-add reset button */
+/* --------- Media queries-only two listed here 414px versus 320px, most features of website designed to be responsive in original code */
 
 @media (max-width: 414px) {
 
@@ -268,15 +269,6 @@ overflow:hidden;
         margin-top: 0;
     }
 
-    .btn--reset {
-        margin-top: 10px 10px;
-        background-color: red;
-        border: 1px transparent;
-        border-radius: 20px;
-        opacity:50%;
-        font-size: small;
-        display:flex;
-    }
 
     .score-area {
         width: 100%;
@@ -300,15 +292,6 @@ overflow:hidden;
 
     .btn--big {
         margin: 10px 10px;
-    }
-
-    .btn--reset {
-        margin-top: 10px 10px;
-        background-color: red;
-        border: 1px transparent;
-        border-radius: 20px;
-        opacity:50%;
-        font-size: small;
     }
 
 }
