@@ -127,7 +127,7 @@ function compare(playerChoice,computerChoice){
 }
 
 /**
- * The below function takes the returned value of the compare function and displays it into the game-text.
+ * The below function takes the returned value of the above compare function and displays it in the messages div.
  * It also triggers the incrementScore function
  */
  function result(answer){
@@ -167,14 +167,14 @@ function compare(playerChoice,computerChoice){
 }
 
 /**
- * Checks the score and declares game over when threshold has been met.
- * Applies the 'best-of-3' logic
- * Updates the 'messages' text to reveal the winner once either the player or Lizard reaches a score of three
- * disables buttons once socre of 3 reached for one of players
+ * Checks the score and declares game over when one of the players reaches a score of three.
+ * Applies the 'best-of-3 rounds to win the game' logic
+ * Updates the 'messages' text to reveal the winner once either the player or the System reaches a score of three
+ * Disables the control buttons once socre of 3 reached for one of players
  */
  function bestOfThree () {
     if (playerScore === 3) {
-        document.getElementById("messages").innerHTML = "Well done! You beat the system man! Click the reset button to play again";//when player score reaches 3, this message prompted
+        document.getElementById("messages").innerHTML = "Well done! You beat the system! Click the reset button to play again.";//when player score reaches 3, this message prompted
         document.getElementById("rock").disabled = true; //Disables control buttons after game ends.
         document.getElementById("paper").disabled = true; //Disables control buttons after game ends.
         document.getElementById("scissors").disabled = true; //Disables control buttons after game ends.
@@ -193,6 +193,7 @@ function compare(playerChoice,computerChoice){
 
 /**
  * Adding functionality to the reset button
+ * Reactives previously disabled control buttons
  */
 
  document.getElementById("reset").onclick = function() {
