@@ -10,7 +10,7 @@ body{
     background-color:aqua;
 }
 
-/*Header and rules*/
+/*Header, rules & external links*/
  header{
     text-align:center;
     height:100px;
@@ -31,7 +31,7 @@ body{
     font-size:small;
  }
 
- /*Game area, control section and welcome-using relative values-responsive without using media queries*/
+ /*Game area, control section and welcome section-all responsive*/
 
 .game-area {
     width:75%;
@@ -92,13 +92,8 @@ color:black;
     width: 90%;
     font-size: 1.2rem;
 }
-/*Container of 'Your Score', 'Lizard Score' and spock images*/
-.controls-area {
-    width: 100%;
-    margin: 30px auto;
-    color: purple;
-}
-/*pick your poison title*/
+
+/*Pick your poison title*/
 .Title {
     background-color: lightblue;
 }
@@ -130,7 +125,7 @@ color:black;
     padding-right: 5%;
 }
 
-/* --------- Buttons-alter design aspects to tailor */
+/* --------- Buttons-controls and reset button */
 
 .btn {
     width: 220px;
@@ -224,6 +219,21 @@ color:black;
 .btn--gray:active,
 .btn--gray:hover {
     background-color: #0d1013;
+}
+
+/*Reset button*/
+
+.btn--reset {
+    margin-top: 25px;
+    background-color: red;
+    border: 1px transparent;
+    border-radius: 20px;
+    opacity:50%;
+}
+
+.btn--reset:active,
+.btn--reset:hover {
+    background-color: greenyellow;
 }
 
 /* --------- Media queries-only two listed here 414px versus 320px, do we need more */

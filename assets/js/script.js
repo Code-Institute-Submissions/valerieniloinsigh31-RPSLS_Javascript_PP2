@@ -4,11 +4,8 @@
  * the will apply to the full page of Javascript
  */
 
-//const playerScore = document.getElementById("player_score");//variable used in scoring system at end
-//const computerScore = document.getElementById("computer_score");//variable used in scoring system at end
-
-playerScore=0;//this will be incremented on later...do we need to declare these are zero at beginning?
-computerScore=0;//this will be incremented on later...do we need to declare these are zero at the beginning?
+playerScore=0;//this will be incremented on later in the scoring section
+computerScore=0;//this will be incremented on later in the scoring section
 
 const playerImage = document.getElementById("player-image");
 //this will change based on playerChoice so filepaths need to be 
@@ -174,25 +171,25 @@ function compare(playerChoice,computerChoice){
  * Checks the score and declares game over when threshold has been met.
  * Applies the 'best-of-3' logic
  * Updates the 'messages' text to reveal the winner once either the player or Lizard reaches a score of three
+ * disables buttons once socre of 3 reached for one of players
  */
  function bestOfThree () {
     if (playerScore === 3) {
-        document.getElementById("messages").innerHTML = "Well done! You beat the system man!";//when player score reaches
-        //three, this message appears in the messages section
+        document.getElementById("messages").innerHTML = "Well done! You beat the system man! Click the power button to play again";//when player score reaches 3, this message prompted
+        document.getElementsByClass("controls").disabled = true; //Disables control buttons after game ends.
        
     } else if (computerScore === 3) {
-        document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you!";//when computer score reachers
-        //three, this message appears in the messages section
+        document.getElementById("messages").innerHTML = "Hard luck. The system destroyed you! Click the power button to play again";//when computer score reaches 3, this message prompted
+        document.getElementsByClass("controls").disabled = true; //Disables control buttons after game ends.
     }
 }
 
 /**
- * Reset function that resets game once bestOfThree has occurred
+ * Adding functionality to the reset button
  */
 
-//function reset (bestOfThree) {
-     //document.getElementById(player_score).innerHTML = `0`;
-     //document.getElementById(computer_score).innerHTML = `0`;
-     //document.getElementById(messages).innerHTML = `Play Again?`;
-     //console.log(messages)
-//I }
+ document.getElementById("reset").onclick = function() {
+     document.getElementById("player_score").innerHTML = `${"0"}`;//changes playerScore to nil
+     document.getElementById("computer_score").innerHTML = `${"0"}`;//changes computerScore to nil
+  };
+  
