@@ -136,7 +136,6 @@ function compare(playerChoice,computerChoice){
 
     incrementScore();
 }
-
 /**
  * Scoring function. 
  * Done in the score-area. One box for player, one box for lizard
