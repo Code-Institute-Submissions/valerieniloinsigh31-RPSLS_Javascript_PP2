@@ -78,12 +78,11 @@ color:black;
     float:right;
     width:30vw;
 }
-/*computer/Lizard's image-default set to transparent version of Spock*/
+/*computer/Lizard's image-default set to Spock*/
 #computer-image {
     width:15vw;
     padding:auto;
     margin-bottom:40%;
-    opacity:15%;
 }
 
 /*this is contained below the player/computer score sections in hTML-to be reviewed*/

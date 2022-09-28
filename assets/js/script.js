@@ -24,8 +24,6 @@ const messages = document.getElementById("messages");//Helpful pop-up messages t
 const buttons = document.getElementsByClassName("controls");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]//an array of the different choices that the user can select
 //and that the computer/Lizard will simulataneously generate autoamtically
-const computerChoice = [Math.floor(Math.random()*5)];//should generate random number between 0-4 that can be used as an
-//index for choices array
 
 /**
  * Ensures function does not start until the DOM has loaded
