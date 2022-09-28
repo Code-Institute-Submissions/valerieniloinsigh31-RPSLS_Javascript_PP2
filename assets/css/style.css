@@ -10,10 +10,14 @@ body{
     background-color:aqua;
 }
 
-/*Header, rules & external links*/
+/*Header, heading, rules & external links*/
  header{
     text-align:center;
-    height:100px;
+    height:1rem;
+ }
+
+ .heading {
+    font-size:2rem;
  }
 
 .rules{
@@ -102,6 +106,8 @@ color:black;
 /*Pick your poison title*/
 .Title {
     background-color: lightblue;
+    overflow:scroll;
+    font-size:1rem;
 }
 /*Scores*/
 .scores {
