@@ -137,17 +137,14 @@ function compare(playerChoice,computerChoice){
 }
 /**
  * Scoring function. 
- * Done in the score-area. One box for player, one box for lizard
  * Increments the score of the user and computer simulataneously in response to the outcome of each round
  * This code is based on the contents of the template literal options within the previous compare function code
  * If the resulting answer text includes 'won', then the playerScore is increased in increments of 1
- * If the resulting answer text includes 'lost', the Lizard's score increased in increments of 1
+ * If the resulting answer text includes 'lost', the System's score is increased in increments of 1
  * The inner HTML & template literal will update the '0' declared for each variable at the beginning 
- * //of this page (playerScore and computerScore) currently in the text space
+ * of this page (playerScore and computerScore) currently in the text space
  * The computer will log 0 if it's a tie
- * It also prompts the best of three function-which will declare overallg game winner as player who reaches a score
- * of three first
- * The game resets once the threshold of three has been reached
+ * It also prompts the best of three function
  */
 
  function incrementScore() {
@@ -166,10 +163,10 @@ function compare(playerChoice,computerChoice){
 }
 
 /**
- * Checks the score and declares game over when one of the players reaches a score of three.
+ * The bestOfThree function checks the score and declares game over when one of the players reaches a score of three.
  * Applies the 'best-of-3 rounds to win the game' logic
  * Updates the 'messages' text to reveal the winner once either the player or the System reaches a score of three
- * Disables the control buttons once socre of 3 reached for one of players
+ * Disables the control buttons once a score of 3 reached for one of players
  */
  function bestOfThree () {
     if (playerScore === 3) {

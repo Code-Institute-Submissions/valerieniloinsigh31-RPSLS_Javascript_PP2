@@ -65,6 +65,9 @@ color:black;
     background-color: lightblue;
     float:left;
     width:30vw;
+    font-size:8vw;
+    font-size:8vh;
+    overflow:scroll;
 }
 /*player image*/
 #player-image {
@@ -77,6 +80,9 @@ color:black;
     background-color: lightblue;
     float:right;
     width:30vw;
+    font-size:8vw;
+    font-size:8vh;
+    overflow:scroll;
 }
 /*computer/'System's' image*/
 #computer-image {
