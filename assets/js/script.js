@@ -66,61 +66,60 @@ function runGame(playerChoice) {
  * Checks to see who the winners are
  * This is a very important compare function that dictates who is defined as the winner from the player/computer choices
  * the below compare function uses the data choice as an index number to pull one of the choices from the choices array
- * parameters coming back as undefined
  **/
 
 function compare(playerChoice,computerChoice){
    if (choices[playerChoice] === choices[computerChoice]) {
-       answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>You are tied!`
+       answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>You tied on this round!`
    } else if (choices[playerChoice] === "rock") {
        if (choices[computerChoice] === "paper"){
-           answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br> Paper beats Rock. You lose this time!`
+           answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br> Paper beats Rock. You lost this round!`
        } else if (choices[computerChoice] === "scissors"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock crushes Scissors. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock crushes Scissors. You won this round!`
        } else if (choices[computerChoice] === "lizard"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock vaporizes Lizard. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock vaporizes Lizard. You won this round!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock knocks Rock out. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock knocks Rock out. You lost this round!`
        }
    } else if (choices[playerChoice] === "paper") {
        if (choices[computerChoice] === "scissors"){
-         answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors conquers Paper. You lose this time!`
+         answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors conquers Paper. You lost this round!`
        } else if (choices[computerChoice] === "lizard"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard bowls over Paper. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard bowls over Paper. You lost this round!`
        } else if (choices[computerChoice] === "spock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper trashes Spock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper trashes Spock. You won this round!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper annihilates Rock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper annihilates Rock. You won this round!`
        }
    } else if (choices[playerChoice] === "scissors") {
        if (choices[computerChoice] === "rock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock beats Scissors. You lost this round!`
        } else if (choices[computerChoice] === "paper"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors beats Paper. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors beats Paper. You won this round!`
        } else if (choices[computerChoice] === "lizard"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors beats Lizard. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors beats Lizard. You won this round!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock beats Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock beats Scissors. You lost this round!`
        }
    } else if (choices[playerChoice] === "lizard") {
        if (choices[computerChoice] === "rock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock trumps Scissors. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock trumps Lizard. You lost this round!`
        } else if (choices[computerChoice] === "paper"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard annihilates Paper. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard annihilates Paper. You won this round!`
        } else if (choices[computerChoice] === "spock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard sends Spock packing. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard sends Spock packing. You won this round!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Rock shows the Lizard what's up. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Scissors shows the Lizard what's up. You lost this round!`
        }
    }  else if (choices[playerChoice] === "spock") {
        if (choices[computerChoice] === "rock"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock trashes Rock. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock trashes Rock. You won this round!`
        } else if (choices[computerChoice] === "paper"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper whoops Spock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper whoops Spock. You lost this round!`
        } else if (choices[computerChoice] === "scissors"){
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock claps back Scissors. You win this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Spock claps back at Scissors. You won this round!`
        } else {
-            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Paper bamboozled Spock. You lose this time!`
+            answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>Lizard bamboozled Spock. You lost this round!`
        }
    }
    result(answer);
@@ -141,8 +140,8 @@ function compare(playerChoice,computerChoice){
  * Done in the score-area. One box for player, one box for lizard
  * Increments the score of the user and computer simulataneously in response to the outcome of each round
  * This code is based on the contents of the template literal options within the previous compare function code
- * If the resulting answer text includes 'win', then the playerScore is increased in increments of 1
- * If the resulting answer text includes 'lose', the Lizard's score increased in increments of 1
+ * If the resulting answer text includes 'won', then the playerScore is increased in increments of 1
+ * If the resulting answer text includes 'lost', the Lizard's score increased in increments of 1
  * The inner HTML & template literal will update the '0' declared for each variable at the beginning 
  * //of this page (playerScore and computerScore) currently in the text space
  * The computer will log 0 if it's a tie
@@ -153,10 +152,10 @@ function compare(playerChoice,computerChoice){
 
  function incrementScore() {
 
-    if (answer.includes(`win`)){
-        playerScore++; //increases player score in increments of 1 if sentence includes 'win'
-    } else if (answer.includes(`lose`)){
-        computerScore++;//increases computer score in increments of 1 if sentence includes 'lose'
+    if (answer.includes(`won`)){
+        playerScore++; //increases player score in increments of 1 if sentence includes 'won'
+    } else if (answer.includes(`lost`)){
+        computerScore++;//increases computer score in increments of 1 if sentence includes 'lost'
     } else {
         console.log('0')//nothing updated if it's a tie (no win/lose)
     }
