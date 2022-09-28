@@ -36,7 +36,7 @@ const computerChoice = [Math.floor(Math.random()*5)];//should generate random nu
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");//defines playerChoice by button clicked by user
-                runGame(playerChoice, computerChoice);//computerChoice should run simultaneously and also be prompted
+                runGame(playerChoice);//computerChoice should run simultaneously and also be prompted
             })
         }
     })
@@ -46,19 +46,22 @@ const computerChoice = [Math.floor(Math.random()*5)];//should generate random nu
  * The idea with the below is images are supposed to update to match the playerChoice and computerChoice
  * do I need to redefine computerChoice here
  * playerChoice and computerChoice used as parameters
+ * think i have to declare the computer variable within this function so it is not global
+ * if the computer declaration was global then it wouldn't redo at each button click
  */
-function runGame(playerChoice, computerChoice) {
+function runGame(playerChoice) {
 
     playerImage.src = `assets/images/${choices[playerChoice]}.png`;//playerChoice changes based on button selected by user
     //data-choice associated with button is number between 0-4 which is then applied as an index number to the choices array
     //Once choice set, template literals used to update image based on filepath name of image matching the updated pathway
-    console.log(`assets/images/${choices[playerChoice]}.png`);
     playerImage.alt= choices[playerChoice];
-
+    console.log(`assets/images/${choices[playerChoice]}.png`)
+    
+     let computerChoice=[Math.floor(Math.random()*5)];
+     console.log(`assets/images/${choices[computerChoice]}.png`);
     computerImage.src = `assets/images/${choices[computerChoice]}.png`;//computerChoice defined at top-based on index of 
     //choices array. computerChoice generates random number between 0-4 which selects an index option fro choices array
     //template literals used to trigger image to update based on filepath name alignign with computerChoice
-    console.log(`assets/images/${choices[computerChoice]}.png`);
     computerImage.alt= choices[computerChoice];//alt automatically updates too
 
     let result= compare(choices[playerChoice], choices[computerChoice]);//result declared here, compares choices
