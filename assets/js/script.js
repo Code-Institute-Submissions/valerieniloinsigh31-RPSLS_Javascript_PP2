@@ -21,7 +21,7 @@ const computerImage = document.getElementById("computer-image");
  * function applied
 */
 const messages = document.getElementById("messages");//not used yet. section for text to be updated
-
+const button = document.getElementByClassName("controls");
 const choices = ["rock", "paper", "scissors", "lizard", "spock"]//an array of the different choices that the user can select
 //and that the computer/Lizard will simulataneously generate autoamtically
 const computerChoice = choices[Math.floor(Math.random()*5)];//should generate random number within index 0-4
@@ -31,7 +31,7 @@ const computerChoice = choices[Math.floor(Math.random()*5)];//should generate ra
  * Added click event listeners to all of the buttons
  */
  document.addEventListener("DOMContentLoaded", function(){
-   const button = document.getElementByClassName("controls");
+   
     for (let button of buttons) {
         button.addEventListener("click", function() {
                 let playerChoice = this.getAttribute("data-choice");//defines playerChoice by button clicked by user
