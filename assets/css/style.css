@@ -23,7 +23,6 @@ body{
     bottom:0;
     box-sizing:border-box;
     min-height:30px;
-    overflow:none;
     padding-top:25px;
     text-align:center;
     color:red;
@@ -82,7 +81,6 @@ color:black;
 /*computer/Lizard's image-default set to Spock*/
 #computer-image {
     width:15vw;
-    padding:auto;
     margin-bottom:40%;
 }
 
