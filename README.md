@@ -126,7 +126,12 @@ You should also mention in this section any interesting bugs or problems you dis
 
 <em>Validator Testing</em>
 <b>HTML</b>
-No errors were returned when passing through the official W3C validator
+No errors were returned when passing through the official W3C validator. Two warnings to do with self closing tags on links in the metadata but I did not consider these serious.
+
+Screengrab: 
+
+![alt text](.//assets/images/htmltesting.png)
+
 <b>CSS</b>
 No errors were found when passing through the official (Jigsaw) validator
 <b>Javascript</b>
