@@ -64,16 +64,17 @@ function runGame(playerChoice) {
     //template literals used to trigger image to update based on filepath name alignign with computerChoice
     computerImage.alt= choices[computerChoice];//alt automatically updates too
 
-    let result= compare(choices[playerChoice], choices[computerChoice]);//result declared here, compares choices
+    let result= compare(playerChoice, computerChoice);//result declared here, compares choices
 }
 
 /**
  * Checks to see who the winners are
  * This is a very important compare function that dictates who is defined as the winner from the player/computer choices
  * the below compare function uses the data choice as an index number to pull one of the choices from the choices array
+ * parameters coming back as undefined
  **/
 
-function compare(playerChoice, computerChoice){
+function compare(playerChoice,computerChoice){
    if (choices[playerChoice] === choices[computerChoice]) {
        answer = `You chose: ${choices[playerChoice]}<br>The System chose: ${choices[computerChoice]}<br>You are tied!`
    } else if (choices[playerChoice] === "rock") {
@@ -186,3 +187,7 @@ function compare(playerChoice, computerChoice){
         //three, this message appears in the messages section
     }
 }
+
+/**
+ * Reset game once bestOfThree has occurred
+ */
