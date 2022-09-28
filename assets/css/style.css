@@ -253,9 +253,16 @@ overflow:hidden;
 }
 
 
-/* --------- Media queries-only two listed here 414px versus 320px, most features of website designed to be responsive in original code */
+/* --------- Media queries-only two listed here 481px (ipads and tablets) versus 320px (small mobile or smaller), most features of website designed to be responsive in original code */
+/* ---------Now let’s see some common breakpoints for widths of devices:
 
-@media (max-width: 414px) {
+320px — 480px: Mobile devices
+481px — 768px: iPads, Tablets
+769px — 1024px: Small screens, laptops
+1025px — 1200px: Desktops, large screens
+1201px and more —  Extra large screens, TV --------*/
+
+@media (max-width: 481px) {
 
     .btn--big {
         margin: 0 10px;

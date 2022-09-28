@@ -37,12 +37,6 @@ const choices = ["rock", "paper", "scissors", "lizard", "spock"]//an array of th
     })
 /**
  * The main game function, which is used in the above function.
- * playerChoice defined in above function used as a parameter in the runGame function
- * The idea with the below is images are supposed to update to match the playerChoice and computerChoice
- * do I need to redefine computerChoice here
- * playerChoice and computerChoice used as parameters
- * think i have to declare the computer variable within this function so it is not global
- * if the computer declaration was global then it wouldn't redo at each button click
  */
 function runGame(playerChoice) {
 
@@ -63,8 +57,7 @@ function runGame(playerChoice) {
 }
 
 /**
- * Checks to see who the winners are
- * This is a very important compare function that dictates who is defined as the winner from the player/computer choices
+ * Checks to see who the winners are-compare function that dictates who is defined as the winner from the player/computer choices
  * the below compare function uses the data choice as an index number to pull one of the choices from the choices array
  **/
 
@@ -144,7 +137,7 @@ function compare(playerChoice,computerChoice){
  * The inner HTML & template literal will update the '0' declared for each variable at the beginning 
  * of this page (playerScore and computerScore) currently in the text space
  * The computer will log 0 if it's a tie
- * It also prompts the best of three function
+ * It also prompts the 'bestOfThree' function
  */
 
  function incrementScore() {
@@ -164,9 +157,8 @@ function compare(playerChoice,computerChoice){
 
 /**
  * The bestOfThree function checks the score and declares game over when one of the players reaches a score of three.
- * Applies the 'best-of-3 rounds to win the game' logic
- * Updates the 'messages' text to reveal the winner once either the player or the System reaches a score of three
- * Disables the control buttons once a score of 3 reached for one of players
+ * Updates the 'messages' text to reveal the winner once either the player or the system reaches a score of three
+ * Disables the control buttons once a score of 3 is reached for one of players
  */
  function bestOfThree () {
     if (playerScore === 3) {
@@ -189,7 +181,7 @@ function compare(playerChoice,computerChoice){
 
 /**
  * Adding functionality to the reset button
- * Reactives previously disabled control buttons
+ * Reactivates previously disabled control buttons
  */
 
  document.getElementById("reset").onclick = function() {

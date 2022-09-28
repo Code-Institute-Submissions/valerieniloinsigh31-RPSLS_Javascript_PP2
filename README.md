@@ -1,18 +1,18 @@
 # Javascript-PP2
-<h1>Rock, Paper, Scissors<h1>
+<h1>Rock, Paper, Scissors, Lizard, Spock-Javascript PP2<h1>
 
 
 <h2><b>Minimum Viable Product-Logic</b></h2>
-Due to the timeline for submissions and my working full-time during the week, I decided to focus on completing one of the outlined tasks to the highest possible quality level as opposed to overcomplicating an original design that I would not have time to execute properly. I planned on completing the Javascript modules in a comprehensive fashion, giving myself time to absorb the logic and to develop a proper understanding prior to starting the project. Accordingly, I took my time going through the videos.
-  I decided on the 'Rock, Paper, Scissors, Lizard, Spock' project as I was familiar with the game and appreciated the demo video provided by CI.
-I planned on having shorter simpler HTML and CSS pages so that I could truly focus on ensuring the Javascript code was adequate.
+Due to the timeline for submissions and my schedule of working full-time during the week, I decided to focus on completing one of the outlined tasks to the highest possible quality level as opposed to overcomplicating an original design that I would not have time to execute properly. I planned on completing the Javascript modules in a comprehensive fashion, giving myself time to absorb the logic and to develop a proper understanding prior to starting the project. Accordingly, I took my time going through the all of videos (on Comparative Programming Languages as well as Javascript Essentials)
+  I decided on the 'Rock, Paper, Scissors, Lizard, Spock' project, as I was familiar with the traditional game and appreciated the scope/demonstration video provided by CI.
+I planned on having shorter simpler HTML and CSS pages (as advised) so that I could truly focus on ensuring the Javascript code was adequate.
 
+<h2>Overview of the Project</h2>
 
-<h1>Design</h1>
-
-<b>Explanation of the purpose of the game:</b> An interactive game of 'Rock, Paper, Scissors,Lizard, Spock' that enables users to play the well-known game against the computer without being able to easily predict an outcome. My version of the game keeps a tally of the score and the winner is decided by best of three rounds and then the game becomes disabled and the reset button must be clicked to play again. 
-<b>Value that the game provides to its users:</b> An entertaining and engaging game that is sponstaneous in it's selection. It offers an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissors, Lizard, Spock', as it is the user versus the computer essentially, which generates its answers at random.
-<b>Description of the deployment procedure:</b> As usual, I created my project on the GITHUB platform, as supported by CI. Once the project was fully complete, fully tested and formatted properly, I followed the usual steps to deploy the project. Please see the description of the deployment steps as well as screenshots below:
+<b>Explanation of the purpose of the game:</b> An interactive game of 'Rock, Paper, Scissors,Lizard, Spock' that enables users to play the well-known game against the computer without being able to easily predict an outcome. My version of the game keeps a tally of the score and the winner is decided by the best of three rounds and then the game becomes disabled and the reset button must be clicked to play again. It is simple to understand and easily accessible. All you need to play is yourself and your laptop.
+<b>Value that the game provides to its users:</b> An entertaining and engaging game that is sponstaneous in it's selection. It offers an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissors, Lizard, Spock', as it is the user versus the computer essentially, which generates its answers at random. 
+ <b>Who it is intended to target:</b> Ages 14+. Anybody in a waiting room of any sort or on a long train/bus journey or just on a cheeky lunch break from school or work. Only one player required and no actual rocks, paper, scissors, lizard or spock needed at all.
+ <b>How it will be useful to the target audience:</b> It is an engaging and interactive game that people can play on their own. It is useful as it does not require mrore than one person and provides spontaneous, interactive fun that is easy to understand.It does not required a large amount of concentration at a time and it resets automatically.</em>
 
 
 <em>Choosing the Javascript functions</em> As advised on the tutorials, I focussed on setting up singular functions with one main task which is called the 'single responsibility principle'. This involves having one key, defined purpose per function as opposed to overcomplicating things. I appreciated the importance of defining parameters and arguments for functions and how the functions inter-relate to one another.
@@ -21,19 +21,31 @@ I planned on having shorter simpler HTML and CSS pages so that I could truly foc
 To give myself an overall idea of the project prior to inputting code, I completed a rough design on Balsamiq Wireframes, screengrab inserted below. 
 I allowed a page for HTML, CSS and Javascript and broke each into sections so that I would not forget an integral aspect of any of the pages or forget to include an important link. I included a separate page listing the Javascript functions that I would be using in building the project, with a brief explanation of each provided.
 
+<b>Screengrab of Balsamiq design:</b>
+HTML Screengrab:
+CSS Screegrab:
+Javascript functions descriptions screengrab:
+
 <b>Learning from Project 1: Responsiveness</b>
 
-My weakest area in PP1 HTML&CSS was the responsiveness. I had tried to use flex-box and relative percentages but did not do this adequately as there were issues across various devices in the responsiveness. I decided to be very thorough with my media-queries and responsiveness testing on this project as a result. I reviewed the tutorials and scoured slack to assist me with this.
+My weakest area in PP1 HTML&CSS was the responsiveness. I had tried to use flex-box and relative percentages (vh,vw, rem and %) but did not do this adequately as there were issues across various devices in the responsiveness. I decided to be very thorough with my responsiveness testing on this project as a result. I reviewed the tutorials and scoured slack to assist me with this. In designing the CSS I tried to ensure that every element was respsonsive, without requiring a media query (though, two media queries are included ofr 480px and 320px max widths). I employed a variety of methods to ensure that the game would be responive to different devices. I applied flexbox to divs in some cases, applied the overflow:scroll function in other places and in many instances defined the width and height of a component using vw and vh respectively. I avoided using px where possible. I carried out thorough testing on various devices using the developer tools. Please see screengrabs of this testing in the testing section below.
 
 <b>Testing:</b>
 -As I was building my Javascript Code in particular, I constantly had a browser open and was inspecting the console via developer tools and was amending errors as they occurred. I found this to be a very efficient way of refining the project as the developer tools points to the exact line of the error and offers a brief explanation.
--Mobile first design-I ensured to do a thorough testing on the website for responsiveness on a number of different devices via developer tools. As per the grid below, I used developer tools to view the finished project on a number of different viewport and please see below how they reacted to responsiveness.
+-Mobile first design-As aforementioned, I ensured to do a thorough testing on the website for responsiveness on a number of different devices via developer tools. As per the grid  and screengrabs below, I used developer tools to view the finished project on a number of different viewport and please see below how they reacted to responsiveness.
 
 Viewport:      Overflow:       Images clear?:
 
 
-Lighthouse: All high, passable. Particularly accessiblilty
-Screegrab of percentiles:
+Also, how efficient is the game on different browsers:
+Google Chrome. Firefox   Safari.  Internet Explorer
+
+
+Once again, using developer tools, I tested the game on Lighthouse: All percentages were suitably high, particularly accessiblilty, as desired. Please see a screengrab of the Lighthouse test below:
+
+
+
+
 
 W3C HTML:
 
@@ -72,13 +84,6 @@ User Stories:
 <li> The user wants a game that offers interaction. Yes, the computer spontaneously generates there own answer which supplies the user with a competitor. Also, the photos are updated based on the users data choice, the scores are updated based on who won each round and for each round and game, a message is prompted saying who won or lost.</li>
 <li>The user wants a game that they can play in between things during the day/whilst waiting/that does not require continued concentration. Yes, the games are short with the best-of-three ounds deciding the winner. No background knowledge is required and the user can stop/start agin whenever they want with the reset button.
 
-
-<h2>Overview of the Project</h2>
-
-<em>'Rock, Paper, Scissors, Lizard, Spock'</em>
- <em>What the project hopes to accomplish:</em> 'Rock, Paper,Scissors, Lizard, Spock' is an interactive, fast-paced online version of the age-old classic, 'Rock, Paper, Scissors', without the need for any props or other players. It is simple to understand and easily accessible. All you need to play is yourself and your laptop.
- <em>Who it is intended to target:</em> Ages 14+. Anybody in a waiting room of any sort or on a long train/bus journey or just on a cheeky lunch break from school or work. Only one player required and no actual rocks, paper, scissors, lizard or spock needed at all.
- <em>How it will be useful to the target audience: It is an engaging and interactive game that people can play on their own. It is useful as it does not require mrore than one person and provides spontaneous, interactive fun that is easy to understand.It does not required a large amount of concentration at a time and it resets automatically.</em>
 
 <h2>Features</h2>
 <p>In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.</p>
@@ -130,51 +135,50 @@ No errors were returned when passing through the official W3C validator. Two war
 
 Screengrab: 
 
-![alt text](.//assets/images/htmltesting.png)
+!alt
 
 <b>CSS</b>
 No errors were found when passing through the official (Jigsaw) validator
+
+
+
 <b>Javascript</b>
 JSHint
 
 <b>Unfixed Bugs</b>
-You will need to mention unfixed bugs and why they were not fixed. This section should include shortcomings of the frameworks or technologies used. 
+I inserted the favicon link provided on the LMS platform but the favicon does not appear to be functional.
 
 <b>Deployment</b>
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
 
-The site was deployed to GitHub pages. The steps to deploy are as follows:
-I logged into GITHUB (Subscription hours provided by CI)
-In the GitHub repository, navigate to the Settings tab
-From the source section drop-down menu, I selected the 'Master Branch'
-The page then automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-The live link can be found here:
+The site was deployed to GitHub pages. The steps to deploy are as follows (including screengrabs):
+-I logged into the Github platform (Subscription hours were provided by the CI as part of the course)
+-I navigated to the repositary page and the relevant repositary
+-In the GitHub repository, I selected to the Settings button
+-I continued onto the Git pages section
+-From the source section drop-down menu, I selected the 'Main Branch' saved and waited
+-I refreshed the page and was met with a live link, which indicated the successful deployment.
+-The live link can be found here:
 
 <b>Credits</b>
--I was greatly inspired by the tutorials provided on this module, in particular the 'Love Maths' walkthrough project and the PP2 scoping video which incpired my project.
--In building the repositary, I completed the walk-through project 'Love Math' whilst listening to the tutorials. I used that code as boilerplate code and then edited that code to redesign it to my Javascript project.
+-I was greatly inspired by the tutorials provided on this module, in particular the 'Love Maths' walkthrough project and the PP2 scoping video which informed my project.
+-In building the repositary for this project, I completed the walk-through project 'Love Math' whilst listening to the tutorials. I used this code as boilerplate code and then edited that code to redesign it to my Javascript project.
 
 I found that this enabled me to have confidence in the structure.
 
 I decided to go with 'Rock, Paper, Scissors, Lizard, Spock' as I am familiar with the traditional game and per the PP2 video provided by CI, I saw definite areas of connection between the design format of this game and the 'Love Math' wlakthrough game tha they supplied (e.g. game area, score area)
 
-I was panicking initially when thnking of how to design my Javascript functions and what order to have them etc and drew great inspiration from the slack channel. I reviewed a number of different query threads from different students on the PP2 section and this inspired a lot of my code.
-
+I was panicking initially when thnking of how to design my Javascript functions and what order to have them etc. and drew great inspiration from the slack channel. I reviewed a number of different query threads from different students on the PP2 section and this inspired/influenced/informed a lot of my code.
 
 <b>Content</b>
-The google font was taken from ''
-The icons in the footer were taken from Font Awesome
+The google font 'Bungee Spice' was taken from 'Google Fonts'
+The button icons and icons in the footer were taken from 'Font Awesome'
 I drew inspiration from the tutorials provided by the Code Institute, the walkthrough demonstration of building the 'Love Math' project, the scoping video for PP2 created by CI and then reveiwed a number of different student queried on the 'PP2' on the Slack Platform and the code used by those students to inform my own coding.
 
-The work of other students that I found inspiring: 
-Clinelly
-Benjibenne
-Love Math Walkthrough Project
-PP2 Scope video
+The work/queries/code of other students that I drew inpiration from in my own project design inclde:
+-Clinelly
+-Benjibenne
 
 <b>Media</b>
 The photos used are from the following sources: Pexel, 
-The font was taken from Google Fonts
-The icons were taken from Font Awesome
 The animation used was taken from 'Animate.CSS
-The loader used was taken from ''
