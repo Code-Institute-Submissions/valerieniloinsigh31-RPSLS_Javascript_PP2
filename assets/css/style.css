@@ -103,19 +103,10 @@ color:black;
     background-color: lightblue;
 }
 /*Scores*/
-#player_score {
-    color: red;
-    font-weight: bold;
-}
-
-#computer_score {
-    color: red;
-    font-weight: bold;
-}
-
 .scores {
     display: inline-block;
     padding: 25px;
+    color:black;
 }
 
 /* --------- Heading and logo */
@@ -226,7 +217,7 @@ color:black;
     background-color: #0d1013;
 }
 
-/*Reset button*/
+/*Reset button-used flex to ensure responsive to difference devices*/
 
 .btn--reset {
     margin-top: 25px;
@@ -241,11 +232,21 @@ color:black;
     background-color: greenyellow;
 }
 
-
 #reset_button {
-    font-size: medium;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-/* --------- Media queries-only two listed here 414px versus 320px, do we need more */
+
+#reset_text
+{
+font-size: 2rem;
+overflow:hidden;
+}
+
+
+/* --------- Media queries-only two listed here 414px versus 320px, do we need more-add reset button */
 
 @media (max-width: 414px) {
 
@@ -265,6 +266,16 @@ color:black;
 
     .btn--gray {
         margin-top: 0;
+    }
+
+    .btn--reset {
+        margin-top: 10px 10px;
+        background-color: red;
+        border: 1px transparent;
+        border-radius: 20px;
+        opacity:50%;
+        font-size: small;
+        display:flex;
     }
 
     .score-area {
@@ -289,6 +300,15 @@ color:black;
 
     .btn--big {
         margin: 10px 10px;
+    }
+
+    .btn--reset {
+        margin-top: 10px 10px;
+        background-color: red;
+        border: 1px transparent;
+        border-radius: 20px;
+        opacity:50%;
+        font-size: small;
     }
 
 }
