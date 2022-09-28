@@ -189,7 +189,11 @@ function compare(playerChoice,computerChoice){
  */
 
  document.getElementById("reset").onclick = function() {
+     playerScore=0;
      document.getElementById("player_score").innerHTML = `${"0"}`;//changes playerScore to nil
+     console.log(playerScore);
+     computerScore=0;
      document.getElementById("computer_score").innerHTML = `${"0"}`;//changes computerScore to nil
+     console.log(computerScore);
   };
   
