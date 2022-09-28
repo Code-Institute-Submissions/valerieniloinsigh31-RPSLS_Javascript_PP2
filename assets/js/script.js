@@ -203,5 +203,10 @@ function compare(playerChoice,computerChoice){
      computerScore=0;
      document.getElementById("computer_score").innerHTML = `${"0"}`;//changes computerScore to nil
      console.log(computerScore);
+     document.getElementById("rock").disabled = false; //Reactivates control buttons once reset is selected
+     document.getElementById("paper").disabled = false; //Reactivates control buttons once reset is selected
+     document.getElementById("scissors").disabled = false; //Reactivates control buttons once reset is selected
+     document.getElementById("lizard").disabled = false; //Reactivates control buttons once reset is selected
+     document.getElementById("spock").disabled = false; //Reactivates control buttons once reset is selected
   };
   
