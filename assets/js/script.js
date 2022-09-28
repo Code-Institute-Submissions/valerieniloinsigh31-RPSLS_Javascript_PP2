@@ -208,5 +208,6 @@ function compare(playerChoice,computerChoice){
      document.getElementById("scissors").disabled = false; //Reactivates control buttons once reset is selected
      document.getElementById("lizard").disabled = false; //Reactivates control buttons once reset is selected
      document.getElementById("spock").disabled = false; //Reactivates control buttons once reset is selected
+     document.getElementById("messages").innerHTML = "Glad to have you back. Let's play again!";//when computer score reaches 3, this message prompted
   };
   
