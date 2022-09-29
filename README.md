@@ -3,16 +3,20 @@
 
 
 <h2><b>Minimum Viable Product-Logic</b></h2>
-Due to the timeline for submissions and my schedule of working full-time during the week, I decided to focus on completing one of the outlined tasks to the highest possible quality level as opposed to overcomplicating an original design that I would not have time to execute properly. I planned on completing the Javascript modules in a comprehensive fashion, giving myself time to absorb the logic and to develop a proper understanding prior to starting the project. Accordingly, I took my time going through the all of videos (on Comparative Programming Languages as well as Javascript Essentials)
+<p>Due to the timeline for submissions and my schedule of working full-time during the week, I decided to focus on completing one of the outlined tasks to the highest possible quality level as opposed to overcomplicating an original design that I would not have time to execute properly. I planned on completing the Javascript modules in a comprehensive fashion, giving myself time to absorb the logic and to develop a proper understanding prior to starting the project. Accordingly, I took my time going through the all of videos (on Comparative Programming Languages as well as Javascript Essentials)
   I decided on the 'Rock, Paper, Scissors, Lizard, Spock' project, as I was familiar with the traditional game and appreciated the scope/demonstration video provided by CI.
-I planned on having shorter simpler HTML and CSS pages (as advised) so that I could truly focus on ensuring the Javascript code was adequate.
+I planned on having shorter simpler HTML and CSS pages (as advised) so that I could truly focus on ensuring the Javascript code was adequate.</p>
 
 <h2>Overview of the Project</h2>
 
-<b>Explanation of the purpose of the game:</b> An interactive game of 'Rock, Paper, Scissors,Lizard, Spock' that enables users to play the well-known game against the computer without being able to easily predict an outcome. My version of the game keeps a tally of the score and the winner is decided by the best of three rounds and then the game becomes disabled and the reset button must be clicked to play again. It is simple to understand and easily accessible. All you need to play is yourself and your laptop.
-<b>Value that the game provides to its users:</b> An entertaining and engaging game that is sponstaneous in it's selection. It offers an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissors, Lizard, Spock', as it is the user versus the computer essentially, which generates its answers at random. 
- <b>Who it is intended to target:</b> Ages 14+. Anybody in a waiting room of any sort or on a long train/bus journey or just on a cheeky lunch break from school or work. Only one player required and no actual rocks, paper, scissors, lizard or spock needed at all.
- <b>How it will be useful to the target audience:</b> It is an engaging and interactive game that people can play on their own. It is useful as it does not require mrore than one person and provides spontaneous, interactive fun that is easy to understand.It does not required a large amount of concentration at a time and it resets automatically.</em>
+<b>Explanation of the purpose of the game:</b> 
+<p>An interactive game of 'Rock, Paper, Scissors,Lizard, Spock' that enables users to play the well-known game against the computer without being able to easily predict an outcome. My version of the game keeps a tally of the score and the winner is decided by the best of three rounds and then the game becomes disabled and the reset button must be clicked to play again. It is simple to understand and easily accessible. All you need to play is yourself and your laptop.</p>
+<b>Value that the game provides to its users:</b> 
+<p>An entertaining and engaging game that is spontaneous in it's selection. It offers an impartial competitor for the user to play against in the game of 'Rock, Paper, Scissors, Lizard, Spock', as it is the user versus the computer essentially, which generates its answers at random.</p>
+ <b>Who it is intended to target:</b> 
+ <p>Ages 14+. Anybody in a waiting room of any sort or on a long train/bus journey or just on a cheeky lunch break from school or work. Only one player required and no actual rocks, paper, scissors, lizard or spock needed at all.</p>
+ <b>How it will be useful to the target audience:</b> 
+ <p>It is an engaging and interactive game that people can play on their own. It is useful as it does not require mrore than one person and provides spontaneous, interactive fun that is easy to understand.It does not required a large amount of concentration at a time and it resets automatically.</p>
 
 
 <em>Choosing the Javascript functions</em> As advised on the tutorials, I focussed on setting up singular functions with one main task which is called the 'single responsibility principle'. This involves having one key, defined purpose per function as opposed to overcomplicating things. I appreciated the importance of defining parameters and arguments for functions and how the functions inter-relate to one another.
