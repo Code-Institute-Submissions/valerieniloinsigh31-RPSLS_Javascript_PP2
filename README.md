@@ -30,7 +30,7 @@ To give myself an overall idea of the project prior to inputting code, I complet
 I included a separate page listing the Javascript functions that I would be using in building the project, with a brief explanation of each function provided.
 
 <b>Javascript functions descriptions screengrab:</b>
-
+![alt text](.//assets/images/balsamiqdesign_jsfunctions.png)
 
 <h1>TESTING</h1>
 
