@@ -199,26 +199,33 @@ Screengrab:![alt text](.//assets/images/deployment_livelink.png)
 
 
 <b>Credits</b>
--I was greatly inspired by the tutorials provided on this module, in particular the 'Love Maths' walkthrough project and the PP2 scoping video which informed my project.
--In building the repositary for this project, I completed the walk-through project 'Love Math' whilst listening to the tutorials. I used this code as boilerplate code and then edited that code to redesign it to my Javascript project.
 
-I found that this enabled me to have confidence in the structure.
+<p>I was greatly inspired by the tutorials provided on this module, in particular the 'Love Maths' walkthrough project and the PP2 scoping video which informed my project.</p>
+<p>In building the repositary for this project, I completed the walk-through project 'Love Math' whilst listening to the tutorials. I used this code as boilerplate code and then edited that code to design my Javascript project.
+I found that this enabled me to have confidence in the structure.</p>
 
-I decided to go with 'Rock, Paper, Scissors, Lizard, Spock' as I am familiar with the traditional game and per the PP2 video provided by CI, I saw definite areas of connection between the design format of this game and the 'Love Math' wlakthrough game tha they supplied (e.g. game area, score area)
+<p>I decided to go with 'Rock, Paper, Scissors, Lizard, Spock' as I am familiar with the traditional game and per the PP2 video provided by CI, I saw definite areas of connection between the design format of this game and the 'Love Math' walkthrough game (e.g. game area, score area)</p>
 
-I was panicking initially when thnking of how to design my Javascript functions and what order to have them etc. and drew great inspiration from the slack channel. I reviewed a number of different query threads from different students on the PP2 section and this inspired/influenced/informed a lot of my code.
+<p>I was panicking initially when thinking about how to design my Javascript functions and what order to have them etc. and drew great inspiration from the slack channel. I reviewed a number of different query threads from different students on the PP2 section and this inspired/influenced/informed a lot of my code.</p>
 
-<b>Content</b>
-The google font 'Bungee Spice' was taken from 'Google Fonts'
-The button icons and icons in the footer were taken from 'Font Awesome'
-I drew inspiration from the tutorials provided by the Code Institute, the walkthrough demonstration of building the 'Love Math' project, the scoping video for PP2 created by CI and then reveiwed a number of different student queried on the 'PP2' on the Slack Platform and the code used by those students to inform my own coding.
-I used 'https://color.adobe.com/create/color-wheel' when deciding on the color scheme
+<b>PP2 Thread on Slack that had great influence over my design:</b>
+![alt text](.//assets/images/pp2_slackthread.png)
 
-The work/queries/code of other students on slack that I drew inspiration from, in designing the code for my own project/considering what approach I would take, include:
+
+<h3><b>Content</b></h3)>
+<ul>
+<li>The google font 'Bungee Spice' was taken from 'Google Fonts'.</li>
+<li>The button icons and icons in the footer were taken from 'Font Awesome'.</li>
+<li>I drew inspiration from the tutorials provided by the Code Institute, the walkthrough demonstration of building the 'Love Math' project, the scoping video for PP2 created by CI and then reveiwed a number of different student queries on the 'PP2 thread' on the Slack Platform (amongst other threads) and the code used by those students to inform my own coding.
+The work/queries/code of other students on slack that I drew inspiration from, in designing the code for my own project/considering what approach I would take, included project queries posted by the following students in particular:
 -Clinelly
 -Benjibenne
--
+</li>
+<li>I used 'https://color.adobe.com/create/color-wheel' when deciding on the color scheme.</li>
+</ul>
 
-<b>Media</b>
-The photos that I used are from the following sources: Pexel, 
-The title animation used was taken from 'Animate.CSS'
+<h3><b>Media</b></h3>
+<ul>
+<li>I used the following wesbites when selecting images: https://www.pexels.com/; https://unsplash.com/; https://pxhere.com/; https://www.freeimages.com/ and google</li>
+<li>The title animation used was taken from 'Animate.CSS'.</li>
+</ul>
