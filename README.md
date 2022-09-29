@@ -169,20 +169,34 @@ I appreciated this function and applied it to my project also.
 <p>Please see below a description and screengrabs of the process that I went through to deploy the this 'Rock, Paper, Scissors, Lizard, Spock' Javascript PP2 project to the GitHub hosting platform:</p>
 
 <p>The site was deployed to GitHub pages. The steps to deploy are as follows (including screengrabs):</p>
+<ol>
+<li>I logged into the Github platform (Subscription hours were provided by the CI as part of the course):</li>
 
--I logged into the Github platform (Subscription hours were provided by the CI as part of the course)
-Screengrab:
--I navigated to the repositary page and selected the relevant repositary.
-Screengrab:
--In the GitHub repository, I selected the Settings button
-Screengrab:
--I continued onto the Git pages section
-Screengrab:
--From the source section drop-down menu, I selected the 'Main Branch' saved and waited
-Screengrab:
--I refreshed the page and was met with a live link, which indicated the successful deployment.
-Screengrab:
--The live link can be found here:
+Screengrab: ![alt text](.//assets/images/github_templatelink.png)
+
+<li>I navigated to the repositary page and selected the relevant repositary:</li>
+
+Screengrab:![alt text](.//assets/images/repositories_deploy.png)
+
+<li>In the GitHub repository, I selected the Settings button:</li>
+
+Screengrab:![alt text](.//assets/images/settings_deploy.png)
+
+<li>I continued onto the Git pages section:</li>
+
+Screengrab:![alt text](.//assets/images/githubpages_deploy.png)
+
+<li>From the source section drop-down menu, I selected the 'Main Branch' saved and waited:</li>
+
+Screengrab:![alt text](.//assets/images/githubbranch_deploy.png)
+
+<li>I refreshed the page and was met with a live link, which indicated the successful deployment:</li>
+
+Screengrab:![alt text](.//assets/images/deployment_livelink.png)
+
+</ol>
+<p><b>The live link can be found here: https://valerieniloinsigh31.github.io/RPSLS_Javascript_PP2/<b></p>
+
 
 <b>Credits</b>
 -I was greatly inspired by the tutorials provided on this module, in particular the 'Love Maths' walkthrough project and the PP2 scoping video which informed my project.
