@@ -46,12 +46,13 @@ Inspecting on developer tools, inspect selection:
 A list of the devices available to inspect on develop tools:
 ![alt text](.//assets/images/devicesdevtools.png)
 
-Viewport/Device:      Overflow:       Images clear:
-Galaxy Fold:
-IpadAir:
-IpadMini:
-Iphone 8:
-MacBook Pro:
+Viewport/Device:      Overflow issue?:                                                              Images clear?:
+Galaxy Fold:              No (overflow:scroll,flex-box and responsive design resolved)                   Yes  
+IpadAir:                  No (overflow:scroll,flex-box and responsive design resolved)                   Yes  
+IpadMini:                 No (overflow:scroll,flex-box and responsive design resolved)                   Yes  
+Iphone 12 Pro:            No (overflow:scroll,flex-box and responsive design resolved)                   Yes  
+MacBook Pro:              No                                                                             Yes
+Nest Hub:                 No (overflow:scroll,flex-box and responsive design resolved)                   Yes  
 
 1. Screengrab of project viewed on ' Galaxy Fold':
 Image 1:
@@ -62,8 +63,8 @@ Image 2:
 ![alt text](.//assets/images/ipadair_device.png)
 3. Screengrab of project viewed on 'Ipad Mini':
 ![alt text](.//assets/images/ipadmini_device.png)
-4. Screengrab of project viewed on 'iPhone8':
-![alt text](.//assets/images/inspect_developertools.png)
+4. Screengrab of project viewed on 'iPhone12 Pro':
+![alt text](.//assets/images/iphone12pro_device.png)
 5. Screengrab of project viewed on 'MacBook Pro':
 ![alt text](.//assets/images/macbookpro_device.png)
 6.Screengrab of project viewed on 'Nest Hub':
@@ -72,11 +73,11 @@ Image 2:
 
 
 Also, I inspected how efficient the game is on different browsers. Please see testing grid below:
-                           Loading time      Images Clear.  All functions working
-Google Chrome
-Firefox   
-Safari
-Internet Explorer
+                           <b>Loading time</b>      <b>Images Clear</b>   <b>All functions working</b>
+Google Chrome                 Minimal                       Yes             Yes
+Firefox                       Minimal                       Yes             Yes
+Safari                        Minimal                       Yes             Yes
+Internet Explorer             Minimal                       Yes             Yes
 
 <p>As I was building my Javascript Code in particular, I constantly had a browser open and was inspecting the console via developer tools and was amending errors as they were flagged. I found this to be a very efficient way of refining the project, as the developer tools points to the exact line of the error and offers a brief explanation. A sample of a rectified error would be the parameters used in my 'if else' statement, I had used '(playerChoice[choices],computerChoice[choices]' initially but upon inspection, updated to (playerChoice,computerChoice).
 -'Mobile first design'-As aforementioned, I ensured to do a thorough testing on the website for responsiveness on a number of different devices via developer tools (at every stage considering how the design would look on a smaller device such as a mobile phone). As per the grid  and screengrabs below, I used developer tools to view the finished project on a number of different viewport and please see below how they reacted to responsiveness.</p>
