@@ -31,6 +31,7 @@ Javascript functions descriptions screengrab:
 My weakest area in PP1 HTML&CSS was the responsiveness. I had tried to use flex-box and relative percentages (vh,vw, rem and %) but did not do this adequately as there were issues across various devices in the responsiveness. I decided to be very thorough with my responsiveness testing on this project as a result. I reviewed the tutorials and scoured slack to assist me with this. In designing the CSS I tried to ensure that every element was respsonsive, without requiring a media query (though, two media queries are included ofr 480px and 320px max widths). I employed a variety of methods to ensure that the game would be responive to different devices. I applied flexbox to divs in some cases, applied the overflow:scroll function in other places and in many instances defined the width and height of a component using vw and vh respectively. I avoided using px where possible. I carried out thorough testing on various devices using the developer tools. Please see screengrabs of this testing in the testing section below.
 
 <b>Testing:</b>
+
 -As I was building my Javascript Code in particular, I constantly had a browser open and was inspecting the console via developer tools and was amending errors as they occurred. I found this to be a very efficient way of refining the project as the developer tools points to the exact line of the error and offers a brief explanation.
 -Mobile first design-As aforementioned, I ensured to do a thorough testing on the website for responsiveness on a number of different devices via developer tools. As per the grid  and screengrabs below, I used developer tools to view the finished project on a number of different viewport and please see below how they reacted to responsiveness.
 
@@ -43,28 +44,37 @@ Google Chrome. Firefox   Safari.  Internet Explorer
 
 Once again, using developer tools, I tested the game on Lighthouse: All percentages were suitably high, particularly accessiblilty, as desired. Please see a screengrab of the Lighthouse test below:
 
+![alt text](.//assets/images/lighthousetesting.png)
 
 
+em>Validator Testing</em>
+
+<b>HTML</b>
+No errors were returned when passing through the official W3C validator. Two warnings to do with self closing tags on links in the metadata but I did not consider these serious.
+
+Screengrab: 
+
+![alt text](.//assets/images/htmltesting.png)
+
+<b>CSS</b>
+No errors were found when passing through the official (Jigsaw) validator
+
+![alt text](.//assets/images/
+
+<b>Javascript</b>
+JSHint: No errors were found in the JSHint testing:
+![alt text](.//assets/images/
 
 
-W3C HTML:
-
-I ran HTML Code through the W3C validator and, as per below screengrab, no errors were found.
-Screengrab:
-
-W3C CSS:
-I ran CSS Code through the W3C validator and, as per below screengrab, no errors were found.
-Screegrab:
-
-JSHint 
-This was a new testing platform for Project 2, specific to testing Javascript
-I ran the Javascript Code through JSHint and discovered the following errors and warnings. Please see how I resolved/responded to the errors in each case below:
+<b>Unfixed Bugs</b>
+I inserted the favicon link provided on the LMS platform but the favicon does not appear to be functional.
 
 <b>Manual testing</b>
 
-Developer tools-open console, check for errors
-Try different buttons
-What was supposed to happen versus what did happen.
+Developer tools-I opened the console and rectified errors as they arose.
+Additionally, when testing on different devices, I updated the CSS code and refreshed the page accordingly
+
+I have conducted enough testing to legitimately believe that the site works well. All of my project’s features work as intended, and the game is easy for the user to understand and play.
 
 
 <b>Design:</b>
@@ -86,35 +96,22 @@ User Stories:
 
 
 <h2>Features</h2>
-<p>In this section, you should go over the different parts of your project, and describe each in a sentence or so. You will need to explain what value each of the features provides for the user, focusing on who this website is for, what it is that they want to achieve and how your project is the best way to help them achieve these things.</p>
 
-<h3>Existing Features-page by page</h3>
-<h4>HTML page:</h4>
-Created the usual HTML page, titled 'Index.html'
-Inserted the necessary links to connect it with the CSS and Javascript pages
-Link for CSS: '<link rel="stylesheet" href="assets/css/style.css">'  Location: Contained within the <head> on the HTML page
-Link for Javascript: 'assets/js/script.js'  Location: Contained within the <body> on the HTML page
-Link for favicons:
-Link for google font:
-Link for animate:
-Link for loader:
+<h3>Existing Features</h3>
 
-<em>CSS:</em>
+
 The focus here was having simple, legible design that was also fun in color scheme and responsive. Clearly divided the different sections using comments.
-Rules are clearly distinguished at the bottom of the page.
 
-
-<em>Javascript:</em>
-The focus of this project. Interactive, spontaneous, well-thought through.
-Functions:
-Image changing based on the button choice: The player-image and computer-image, in the PP2 scope video on the CI LMS version of game, change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected).
+-Image changing based on the button choice: The player-image and computer-image, in the PP2 scope video on the CI LMS version of game, change based on selection of button (e.g. whether rock, paper, scissors, lizard or spock was selected).
 I appreciated this function and applied it to my project also.
  The basic premise being that for each of the two images in the 'score_area'(one for the player score section and one for the computer/lizard score section), the image will update based on what playerChoice and computerChoices were made. To do this, using the src filepath to the assets folder and template literals, each of the five images (rock, paper, scissors, lizard, spock) needed to be saved to the images folder with the name in a certain format (rock.png., scissors.png etc.) and the code written in template literal placeholder format that will target specific images based on button choice so that the selection of a certain choice prompts the relevant image to appear as opposed to any of the others. 'Src...used for this.'. The user image is 'player-image' and the Lizard image is 'computer-image'
 
-Buttons- design is based on the 'Love Math' walkthrough game project. Added an eventListener that activates the user choice once clicked on by user and triggers the other functions (prompts text to change, prompts computer to randomly generate their choice, prompts compare function, prompts score board etc.)
-Score board- Compare function used, winner chosen based on code written to suit the rules of the game. This is done using a long 'if else' formula. Score updates in increments of one based on winner chosen.
+-Buttons- design is based on the 'Love Math' walkthrough game project. Added an eventListener that activates the user choice once clicked on by user and triggers the other functions (prompts text to change, prompts computer to randomly generate their choice, prompts compare function, prompts score board etc.)
+-Tailored messages prompted by game-using if else code
+-Score board- Compare function used, winner chosen based on code written to suit the rules of the game. This is done using a long 'if else' formula. Score updates in increments of one based on winner chosen.
 Prompted responses
-Best-of-three feature: Once player/Lizard reaches a score of three, the game is over and a winner is selected. This autamtically resets the scorebaord.
+-Best-of-three feature: Once player/Lizard reaches a score of three, the game is over and a winner is selected. This autamtically resets the scorebaord.
+-Reset button-starts game again
 
 
 <h3>Features left to implement</h3>
@@ -122,34 +119,9 @@ Best-of-three feature: Once player/Lizard reaches a score of three, the game is 
 lost or won the game. (E.g. a gif of somebody falling if the loser has lost the game)
 -Timer appears: To introduce an element of urgency, I would insert a countdown timer that allows the user 15 seconds to choose their button on each round or else the game resets.
 
-<b>Testing</b>
-I have conducted enough testing to legitimately believe that the site works well. All of my project’s features work as intended, and the game is easy for the user to understand and play.
-
-Developers Tools (viewport testing): In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-<em>Validator Testing</em>
-<b>HTML</b>
-No errors were returned when passing through the official W3C validator. Two warnings to do with self closing tags on links in the metadata but I did not consider these serious.
-
-Screengrab: 
-
-!alt
-
-<b>CSS</b>
-No errors were found when passing through the official (Jigsaw) validator
-
-
-
-<b>Javascript</b>
-JSHint
-
-<b>Unfixed Bugs</b>
-I inserted the favicon link provided on the LMS platform but the favicon does not appear to be functional.
 
 <b>Deployment</b>
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub)
+Please see below a description and screengrabs of the process I went through to deploy the this RPSLS Javascript PP2 project to the GitHub hosting platform
 
 The site was deployed to GitHub pages. The steps to deploy are as follows (including screengrabs):
 -I logged into the Github platform (Subscription hours were provided by the CI as part of the course)
