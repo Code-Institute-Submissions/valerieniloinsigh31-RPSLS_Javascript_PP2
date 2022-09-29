@@ -96,7 +96,7 @@ color:black;
     margin-bottom:40%;
 }
 
-/*this is contained below the player/computer score sections in hTML-to be reviewed*/
+/*Score area*/
 .score-area {
     margin: 5px auto;
     width: 90%;
@@ -155,7 +155,7 @@ color:black;
     transition: all 1s;
 }
 
-/* --- new pseudo-element - to insert content after an element. This will be used to insert the content of our
+/* --- New pseudo-element - to insert content after an element. This will be used to insert the content of our
 'data choice' attribute, which will inform the labels of our buttons ---*/
 
 .btn--big::after {
@@ -253,14 +253,8 @@ overflow:hidden;
 }
 
 
-/* --------- Media queries-only two listed here 481px (ipads and tablets) versus 320px (small mobile or smaller), most features of website designed to be responsive in original code */
-/* ---------Now let’s see some common breakpoints for widths of devices:
+/* --------- Media queries-only two listed here 481px (ipads and tablets) versus 320px (small mobile or smaller), all other features of website designed to be responsive to all devices in original code */
 
-320px — 480px: Mobile devices
-481px — 768px: iPads, Tablets
-769px — 1024px: Small screens, laptops
-1025px — 1200px: Desktops, large screens
-1201px and more —  Extra large screens, TV --------*/
 
 @media (max-width: 481px) {
 
