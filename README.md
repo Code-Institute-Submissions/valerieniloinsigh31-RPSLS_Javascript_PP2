@@ -158,24 +158,30 @@ I appreciated this function and applied it to my project also.
 
 <h3>Features left to implement</h3>
 <ol>
-<li><b>Use of tailered gifs</b>
-<p>As opposed to just text disclosing the winner/loser being prompted at the conclusion of each game, a little gif or video could play depending on whether the user has lost or won the game. (E.g. a gif of somebody falling if the user has lost the game or a gif of somebody laughing raucously if the user has won the game).</p></li>
+<li><b>Use of tailored gifs</b>
+<p>As opposed to just text disclosing the winner/loser being prompted at the conclusion of each game, a little gif or video could play depending on whether the user has lost or won the game. (E.g. a gif of somebody falling if the user has lost the game or a gif of somebody laughing raucously if the user has won the game). Instead of still images being prompted when a control button is selected, I would update this more high quality gifs (e.g. a small animation of a real lizard for the 'lizard' option)</p></li>
 <li><b>Timer appears:</b> 
 <p>To introduce an element of urgency, I would insert a countdown timer that allows the user 15 seconds to choose their button on each round or else the game resets.</p></li>
 </ol>
 
 
 <h2><b>Deployment</b></h2>
-Please see below a description and screengrabs of the process that I went through to deploy the this RPSLS Javascript PP2 project to the GitHub hosting platform:
+<p>Please see below a description and screengrabs of the process that I went through to deploy the this 'Rock, Paper, Scissors, Lizard, Spock' Javascript PP2 project to the GitHub hosting platform:</p>
 
-The site was deployed to GitHub pages. The steps to deploy are as follows (including screengrabs):
+<p>The site was deployed to GitHub pages. The steps to deploy are as follows (including screengrabs):</p>
 
 -I logged into the Github platform (Subscription hours were provided by the CI as part of the course)
--I navigated to the repositary page and the relevant repositary
--In the GitHub repository, I selected to the Settings button
+Screengrab:
+-I navigated to the repositary page and selected the relevant repositary.
+Screengrab:
+-In the GitHub repository, I selected the Settings button
+Screengrab:
 -I continued onto the Git pages section
+Screengrab:
 -From the source section drop-down menu, I selected the 'Main Branch' saved and waited
+Screengrab:
 -I refreshed the page and was met with a live link, which indicated the successful deployment.
+Screengrab:
 -The live link can be found here:
 
 <b>Credits</b>
