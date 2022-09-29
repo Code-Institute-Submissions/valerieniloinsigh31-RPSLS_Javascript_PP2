@@ -23,15 +23,14 @@ I planned on having shorter simpler HTML and CSS pages (as advised) so that I co
 <p>As advised on the tutorials, I focussed on setting up singular functions with one main task which is called the 'single responsibility principle'. This involves having one key, defined purpose per function as opposed to overcomplicating things. I took my time doing research on slack and plotting my functions on Balsamiq Wireframes prior to implementing them and I put a lot of effort and consideration into the parameters and arguments for functions and how the functions related to one another.
 
 <b>Balsamiq wireframes</b>
-To give myself an overall idea of the project prior to inputting code, I completed a rough design on Balsamiq Wireframes, screengrab inserted below. 
-I allowed a page for HTML, CSS and Javascript and broke each into sections so that I would not forget an integral aspect of any of the pages or forget to include an important link. I included a separate page listing the Javascript functions that I would be using in building the project, with a brief explanation of each function provided.
+To give myself an overall idea of the project prior to inputting code, I completed a rough design of what the front-end view of the game should look like, on Balsamiq Wireframes, please see below:
+<b>Game Balsamiq Design layout</b>:
+![alt text](.//assets/images/balsamiqdesign_view.png)
 
-<b>Screengrabs of Balsamiq design:</b>
-<h3>HTML Screengrab:</h3>
+I included a separate page listing the Javascript functions that I would be using in building the project, with a brief explanation of each function provided.
 
-<h3>CSS Screegrab:</h3>
+<b>Javascript functions descriptions screengrab:</b>
 
-<h3>Javascript functions descriptions screengrab:</h3>
 
 <h1>TESTING</h1>
 

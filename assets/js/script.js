@@ -11,19 +11,13 @@
  let answer=``;
  
  const playerImage = document.getElementById("player-image");
- //this will change based on playerChoice so filepaths need to be 
- //named correctly
+
  const computerImage = document.getElementById("computer-image");
- //this will change based on computerChoice so filepaths need
- //to be named correctly
- 
- /**Message prompted is different based on whether the player or the computer wins-maybe use just one message once best of three 
-  * function applied
- */
+
  const messages = document.getElementById("messages");//Helpful pop-up messages that aids user understanding
  const buttons = document.getElementsByClassName("controls");
  const choices = ["rock", "paper", "scissors", "lizard", "spock"];//an array of the different choices that the user can select
- //and that the computer/Lizard will simulataneously generate autoamtically
+ //and that the computer/Lizard will simulataneously generate automatically
  
  /**
   * Ensures function does not start until the DOM has loaded
@@ -135,11 +129,6 @@
   * Scoring function. 
   * Increments the score of the user and computer simulataneously in response to the outcome of each round
   * This code is based on the contents of the template literal options within the previous compare function code
-  * If the resulting answer text includes 'won', then the playerScore is increased in increments of 1
-  * If the resulting answer text includes 'lost', the System's score is increased in increments of 1
-  * The inner HTML & template literal will update the '0' declared for each variable at the beginning 
-  * of this page (playerScore and computerScore) currently in the text space
-  * The computer will log 0 if it's a tie
   * It also prompts the 'bestOfThree' function
   */
  
@@ -184,7 +173,7 @@
  
  /**
   * Adding functionality to the reset button
-  * Reactivates previously disabled control buttons
+  * Reactivates previously disabled control buttons once selected and resets score to nil
   */
  
   document.getElementById("reset").onclick = function() {
