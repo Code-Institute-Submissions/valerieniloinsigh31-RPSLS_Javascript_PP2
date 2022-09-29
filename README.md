@@ -41,14 +41,33 @@ I allowed a page for HTML, CSS and Javascript and broke each into sections so th
 
 <p>Mobile first design-As aforementioned, I ensured to do a thorough testing on the website for responsiveness on a number of different devices via developer tools. As per the grid  and screengrabs below, I used developer tools to view the finished project on a number of different viewports and please see below how they reacted to responsiveness.</p>
 
+Inspecting on developer tools, inspect selection: 
+![alt text](.//assets/images/inspect_developertools.png)
+A list of the devices available to inspect on develop tools:
+![alt text](.//assets/images/devicesdevtools.png)
+
 Viewport/Device:      Overflow:       Images clear:
+Galaxy Fold:
+IpadAir:
+IpadMini:
+Iphone 8:
+MacBook Pro:
 
-
-1. Screengrab of project viewed on '':
-2. Screengrab of project viewed on '':
-3. Screengrab of project viewed on '':
-4. Screengrab of project viewed on '':
-5. Screengrab of project viewed on '':
+1. Screengrab of project viewed on ' Galaxy Fold':
+Image 1:
+![alt text](.//assets/images/galaxyfold_device.png)
+Image 2:
+![alt text](.//assets/images/galaxyfold_appliedresponse.png)
+2. Screengrab of project viewed on 'Ipad Air':
+![alt text](.//assets/images/ipadair_device.png)
+3. Screengrab of project viewed on 'Ipad Mini':
+![alt text](.//assets/images/ipadmini_device.png)
+4. Screengrab of project viewed on 'iPhone8':
+![alt text](.//assets/images/inspect_developertools.png)
+5. Screengrab of project viewed on 'MacBook Pro':
+![alt text](.//assets/images/macbookpro_device.png)
+6.Screengrab of project viewed on 'Nest Hub':
+![alt text](.//assets/images/nesthub_device.png)
 
 
 
